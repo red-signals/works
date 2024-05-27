@@ -1,0 +1,832 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><!-- hexo injector head_begin start -->
+<link rel="stylesheet" href="/works/css/bilicard.css">
+<style type="text/css">.douban-card-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-height: 400px;
+}
+
+.douban-card {
+    display: flex;
+    margin: 30px 10px;
+    padding: 15px;
+    border-radius: 15px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: antiquewhite;
+    text-decoration: none;
+}
+
+.douban-card:hover {
+    text-decoration: none;
+}
+
+.douban-card-bgimg {
+    position: absolute;
+    width: 115%;
+    height: 115%;
+    filter: blur(15px) brightness(0.6);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.douban-card-img {
+    position: relative;
+    height: 130px;
+    width: 80px;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.douban-card-left:hover .douban-card-img {
+    filter: blur(5px) brightness(0.6);
+    transform: perspective(800px) rotateX(180deg);
+}
+
+.douban-card-left .douban-card-img {
+    transition: all 500ms ease;
+}
+
+.douban-card-left {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.douban-card-left .douban-card-status {
+    height: 130px;
+    width: 80px;
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 30%;
+    transform: rotateX(180deg);
+    backface-visibility: hidden;
+    transition: all 500ms ease;
+}
+
+.douban-card-left:hover .douban-card-status {
+    transform: perspective(800px) rotateX(0deg);
+}
+
+.douban-card-right {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: 12px;
+    font-size: 16px;
+    font-family: "Courier New", Courier, monospace;
+    line-height: 1.3;
+    color: antiquewhite;
+}
+
+.douban-card-item {
+    margin-top: 4px;
+}
+</style><!-- hexo injector head_begin end --><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>黑苹果硬件配置 | Works</title><meta name="author" content="Red Signals"><meta name="copyright" content="Red Signals"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="配置一           部件 选品名称 尺寸 功率 淘宝价格&#x2F;链接 京东价格 闲鱼 价格（元）    cpu 英特尔  i7 10700K 37.5×37.5mm 125W 1790 2300  1780.00   主板 微星  Z490-A PRO 30.5×24.4cm 35W 522 1589  539   显卡 蓝宝石  RX 6600XT 白金 OC 8G 240x120x">
+<meta property="og:type" content="article">
+<meta property="og:title" content="黑苹果硬件配置">
+<meta property="og:url" content="https://red-signals.github.io/Works/2023/11/13/%E9%BB%91%E8%8B%B9%E6%9E%9C%E6%A1%88%E4%BE%8B%E4%B8%80/index.html">
+<meta property="og:site_name" content="Works">
+<meta property="og:description" content="配置一           部件 选品名称 尺寸 功率 淘宝价格&#x2F;链接 京东价格 闲鱼 价格（元）    cpu 英特尔  i7 10700K 37.5×37.5mm 125W 1790 2300  1780.00   主板 微星  Z490-A PRO 30.5×24.4cm 35W 522 1589  539   显卡 蓝宝石  RX 6600XT 白金 OC 8G 240x120x">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://red-signals.github.io/works/img/cover/desk.jpg">
+<meta property="article:published_time" content="2023-11-13T07:49:41.000Z">
+<meta property="article:modified_time" content="2024-05-25T03:52:55.352Z">
+<meta property="article:author" content="Red Signals">
+<meta property="article:tag" content="黑苹果">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://red-signals.github.io/works/img/cover/desk.jpg"><link rel="shortcut icon" href="/works/img/works%E5%A4%B4%E5%83%8F.png"><link rel="canonical" href="https://red-signals.github.io/Works/2023/11/13/%E9%BB%91%E8%8B%B9%E6%9E%9C%E6%A1%88%E4%BE%8B%E4%B8%80/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.clarity.ms"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/works/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>(function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+})(window, document, "clarity", "script", "lfvkwtllmi");</script><script>const GLOBAL_CONFIG = {
+  root: '/works/',
+  algolia: undefined,
+  localSearch: {"path":"/works/search.xml","preload":true,"top_n_per_article":1,"unescape":true,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: Red Signals","link":"链接: ","source":"来源: Works","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'mediumZoom',
+  Snackbar: {"chs_to_cht":"你已切换为繁体中文","cht_to_chs":"你已切换为简体中文","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"top-center"},
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: true,
+  islazyload: true,
+  isAnchor: true,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '黑苹果硬件配置',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-05-25 11:52:55'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 8 || hour >= 22
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><link rel="stylesheet" href="/config/css/custom.css"><link rel="stylesheet" href="/works/config/css/custom.css"><!-- hexo injector head_end start -->
+<link rel="stylesheet" href="/works/css/collapse.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-double-row-display@1.00/cardlistpost.min.css"/>
+<style>#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags:before {content:"\A";
+  white-space: pre;}#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags > .article-meta__separator{display:none}</style>
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.2"></head><body><script>window.paceOptions = {
+  restartOnPushState: false
+}
+
+document.addEventListener('pjax:send', () => {
+  Pace.restart()
+})
+</script><link rel="stylesheet" href="/works/css/center-simple.css"/><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/works/img/works%E5%A4%B4%E5%83%8F.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/works/archives/"><div class="headline">文章</div><div class="length-num">41</div></a><a href="/works/tags/"><div class="headline">标签</div><div class="length-num">21</div></a><a href="/works/categories/"><div class="headline">分类</div><div class="length-num">20</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="https://red-signals.github.io/work"><i class="fa-fw fas fa-solid fa-street-view"></i><span> Work</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-cogs fa-fade"></i><span> 系统</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/works/%E7%B3%BB%E7%BB%9F/Win/"><i class="fa-fw fas fa-brands fa-windows"></i><span> Win</span></a></li><li><a class="site-page child" href="/works/%E7%B3%BB%E7%BB%9F/Mac/"><i class="fa-fw fas fa-brands fa-apple"></i><span> Mac</span></a></li><li><a class="site-page child" href="/works/%E7%B3%BB%E7%BB%9F/Linux/"><i class="fa-fw fab fa-linux"></i><span> Linux</span></a></li><li><a class="site-page child" href="/works/%E7%B3%BB%E7%BB%9F/Phone/"><i class="fa-fw fas fa-mobile-alt"></i><span> Phone</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-globe fa-fade"></i><span> 网络</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/works/%E7%BD%91%E7%BB%9C/Github/"><i class="fa-fw fab fa-github"></i><span> Github</span></a></li><li><a class="site-page child" href="/works/%E7%BD%91%E7%BB%9C/Vmware/"><i class="fa-fw fas fa-server"></i><span> Vmware</span></a></li><li><a class="site-page child" href="/works/%E7%BD%91%E7%BB%9C/Phpstudy/"><i class="fa-fw fas fa-book"></i><span> Phpstudy</span></a></li><li><a class="site-page child" href="/works/%E7%BD%91%E7%BB%9C/%E6%9C%8D%E5%8A%A1%E5%99%A8/"><i class="fa-fw fas fa-server"></i><span> 服务器</span></a></li><li><a class="site-page child" href="/works/%E7%BD%91%E7%BB%9C/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"><i class="fa-fw fas fa-shield-alt"></i><span> 科学上网</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-shopping-cart fa-fade"></i><span> 网店</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/works/%E7%BD%91%E5%BA%97/%E5%B9%B3%E5%8F%B0/"><i class="fa-fw fas fa-store"></i><span> 平台</span></a></li><li><a class="site-page child" href="/works/%E7%BD%91%E5%BA%97/%E5%95%86%E5%93%81/"><i class="fa-fw fas fa-tag"></i><span> 商品</span></a></li><li><a class="site-page child" href="/works/%E7%BD%91%E5%BA%97/%E8%BF%90%E8%90%A5/"><i class="fa-fw fas fa-cogs"></i><span> 运营</span></a></li><li><a class="site-page child" href="/works/%E7%BD%91%E5%BA%97/%E5%B7%A5%E5%85%B7/"><i class="fa-fw fas fa-wrench"></i><span> 工具</span></a></li><li><a class="site-page child" href="/works/%E7%BD%91%E5%BA%97/%E7%94%9F%E4%BA%A7%E8%B5%84%E6%96%99/"><i class="fa-fw fas fa-industry"></i><span> 生产资料</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-money-bill-wave fa-fade"></i><span> 网赚</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/works/%E7%BD%91%E8%B5%9A/%E7%BA%BF%E6%8A%A5/"><i class="fa-fw fas fa-newspaper"></i><span> 线报</span></a></li><li><a class="site-page child" href="/works/%E7%BD%91%E8%B5%9A/%E5%B7%A5%E5%85%B7/"><i class="fa-fw fas fa-tools"></i><span> 工具</span></a></li><li><a class="site-page child" href="/works/%E7%BD%91%E8%B5%9A/%E7%94%9F%E4%BA%A7%E8%B5%84%E6%96%99/"><i class="fa-fw fas fa-industry"></i><span> 生产资料</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-bullhorn fa-fade"></i><span> 自媒体</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/works/%E8%87%AA%E5%AA%92%E4%BD%93/%E5%B9%B3%E5%8F%B0/"><i class="fa-fw fas fa-broadcast-tower"></i><span> 平台</span></a></li><li><a class="site-page child" href="/works/%E8%87%AA%E5%AA%92%E4%BD%93/%E5%86%85%E5%AE%B9/"><i class="fa-fw fas fa-file-alt"></i><span> 内容</span></a></li><li><a class="site-page child" href="/works/%E8%87%AA%E5%AA%92%E4%BD%93/%E5%B7%A5%E5%85%B7/"><i class="fa-fw fas fa-tools"></i><span> 工具</span></a></li><li><a class="site-page child" href="/works/%E8%87%AA%E5%AA%92%E4%BD%93/%E7%94%9F%E4%BA%A7%E8%B5%84%E6%96%99/"><i class="fa-fw fas fa-industry"></i><span> 生产资料</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list-check fa-fade"></i><span> 功能</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/works/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/works/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/works/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page child" href="/works/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></li><li><a class="site-page child" href="/works/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url('/works/../works/img/cover/desk.jpg')"><nav id="nav"><span id="blog-info"><a href="/works/" title="Works"><img class="site-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/works/img/works%E5%A4%B4%E5%83%8F.png"/></a></span><div id="menus"></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="https://red-signals.github.io/work"><i class="fa-fw fas fa-solid fa-street-view"></i><span> Work</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-cogs fa-fade"></i><span> 系统</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/works/%E7%B3%BB%E7%BB%9F/Win/"><i class="fa-fw fas fa-brands fa-windows"></i><span> Win</span></a></li><li><a class="site-page child" href="/works/%E7%B3%BB%E7%BB%9F/Mac/"><i class="fa-fw fas fa-brands fa-apple"></i><span> Mac</span></a></li><li><a class="site-page child" href="/works/%E7%B3%BB%E7%BB%9F/Linux/"><i class="fa-fw fab fa-linux"></i><span> Linux</span></a></li><li><a class="site-page child" href="/works/%E7%B3%BB%E7%BB%9F/Phone/"><i class="fa-fw fas fa-mobile-alt"></i><span> Phone</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-globe fa-fade"></i><span> 网络</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/works/%E7%BD%91%E7%BB%9C/Github/"><i class="fa-fw fab fa-github"></i><span> Github</span></a></li><li><a class="site-page child" href="/works/%E7%BD%91%E7%BB%9C/Vmware/"><i class="fa-fw fas fa-server"></i><span> Vmware</span></a></li><li><a class="site-page child" href="/works/%E7%BD%91%E7%BB%9C/Phpstudy/"><i class="fa-fw fas fa-book"></i><span> Phpstudy</span></a></li><li><a class="site-page child" href="/works/%E7%BD%91%E7%BB%9C/%E6%9C%8D%E5%8A%A1%E5%99%A8/"><i class="fa-fw fas fa-server"></i><span> 服务器</span></a></li><li><a class="site-page child" href="/works/%E7%BD%91%E7%BB%9C/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"><i class="fa-fw fas fa-shield-alt"></i><span> 科学上网</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-shopping-cart fa-fade"></i><span> 网店</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/works/%E7%BD%91%E5%BA%97/%E5%B9%B3%E5%8F%B0/"><i class="fa-fw fas fa-store"></i><span> 平台</span></a></li><li><a class="site-page child" href="/works/%E7%BD%91%E5%BA%97/%E5%95%86%E5%93%81/"><i class="fa-fw fas fa-tag"></i><span> 商品</span></a></li><li><a class="site-page child" href="/works/%E7%BD%91%E5%BA%97/%E8%BF%90%E8%90%A5/"><i class="fa-fw fas fa-cogs"></i><span> 运营</span></a></li><li><a class="site-page child" href="/works/%E7%BD%91%E5%BA%97/%E5%B7%A5%E5%85%B7/"><i class="fa-fw fas fa-wrench"></i><span> 工具</span></a></li><li><a class="site-page child" href="/works/%E7%BD%91%E5%BA%97/%E7%94%9F%E4%BA%A7%E8%B5%84%E6%96%99/"><i class="fa-fw fas fa-industry"></i><span> 生产资料</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-money-bill-wave fa-fade"></i><span> 网赚</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/works/%E7%BD%91%E8%B5%9A/%E7%BA%BF%E6%8A%A5/"><i class="fa-fw fas fa-newspaper"></i><span> 线报</span></a></li><li><a class="site-page child" href="/works/%E7%BD%91%E8%B5%9A/%E5%B7%A5%E5%85%B7/"><i class="fa-fw fas fa-tools"></i><span> 工具</span></a></li><li><a class="site-page child" href="/works/%E7%BD%91%E8%B5%9A/%E7%94%9F%E4%BA%A7%E8%B5%84%E6%96%99/"><i class="fa-fw fas fa-industry"></i><span> 生产资料</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-bullhorn fa-fade"></i><span> 自媒体</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/works/%E8%87%AA%E5%AA%92%E4%BD%93/%E5%B9%B3%E5%8F%B0/"><i class="fa-fw fas fa-broadcast-tower"></i><span> 平台</span></a></li><li><a class="site-page child" href="/works/%E8%87%AA%E5%AA%92%E4%BD%93/%E5%86%85%E5%AE%B9/"><i class="fa-fw fas fa-file-alt"></i><span> 内容</span></a></li><li><a class="site-page child" href="/works/%E8%87%AA%E5%AA%92%E4%BD%93/%E5%B7%A5%E5%85%B7/"><i class="fa-fw fas fa-tools"></i><span> 工具</span></a></li><li><a class="site-page child" href="/works/%E8%87%AA%E5%AA%92%E4%BD%93/%E7%94%9F%E4%BA%A7%E8%B5%84%E6%96%99/"><i class="fa-fw fas fa-industry"></i><span> 生产资料</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list-check fa-fade"></i><span> 功能</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/works/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/works/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/works/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page child" href="/works/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></li><li><a class="site-page child" href="/works/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></li></ul></div></div><div id="nav-right"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">黑苹果硬件配置</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-11-13T07:49:41.000Z" title="发表于 2023-11-13 15:49:41">2023-11-13</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-05-25T03:52:55.352Z" title="更新于 2024-05-25 11:52:55">2024-05-25</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/works/categories/%E7%B3%BB%E7%BB%9F/">系统</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/works/categories/%E7%B3%BB%E7%BB%9F/Mac/">Mac</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">2k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>7分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="黑苹果硬件配置"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="配置一"><a href="#配置一" class="headerlink" title="配置一"></a>配置一</h2><div style="text-align: center">
+  <div class="github-card"
+    data-user="evenlinyf"
+    data-repo="hackintosh-EFI-Z490A-i710700k-5700xt"
+    data-height="120"
+    data-width="780"
+    data-theme="default"
+    data-target=""
+    data-client-id=""
+    data-client-secret=""
+  ></div>
+</div>
+<script src="/works/github-card-lib/githubcard.js"></script>
+
+
+<table>
+<thead>
+<tr>
+<th><strong>部件</strong></th>
+<th><strong>选品名称</strong></th>
+<th><strong>尺寸</strong></th>
+<th><strong>功率</strong></th>
+<th><strong>淘宝价格&#x2F;链接</strong></th>
+<th><strong>京东价格</strong></th>
+<th><strong>闲鱼</strong></th>
+<th><strong>价格（元）</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>cpu</strong></td>
+<td>英特尔  i7 10700K</td>
+<td>37.5×37.5mm</td>
+<td>125W</td>
+<td>1790</td>
+<td>2300</td>
+<td></td>
+<td><a target="_blank" rel="noopener" href="https://item.taobao.com/item.htm?spm=a21n57.1.0.0.71f1523cgp4zlN&id=677704141190&ns=1&abbucket=7#detail"><strong>1780.00</strong></a></td>
+</tr>
+<tr>
+<td><strong>主板</strong></td>
+<td>微星  Z490-A PRO</td>
+<td>30.5×24.4cm</td>
+<td>35W</td>
+<td>522</td>
+<td>1589</td>
+<td></td>
+<td><a target="_blank" rel="noopener" href="https://item.taobao.com/item.htm?spm=a21n57.1.0.0.41bd523c7qOfWM&id=692403326140&ns=1&abbucket=7#detail">539</a></td>
+</tr>
+<tr>
+<td><strong>显卡</strong></td>
+<td>蓝宝石  RX 6600XT 白金 OC 8G</td>
+<td>240x120x45mm</td>
+<td>160W</td>
+<td>1348</td>
+<td>2300</td>
+<td></td>
+<td><a target="_blank" rel="noopener" href="https://item.taobao.com/item.htm?spm=a21n57.1.0.0.71f1523cgp4zlN&id=683858271080&ns=1&abbucket=7#detail">1908</a></td>
+</tr>
+<tr>
+<td><strong>内存</strong></td>
+<td>金士顿32g  3600 单条</td>
+<td></td>
+<td>20W</td>
+<td>600</td>
+<td></td>
+<td></td>
+<td><a target="_blank" rel="noopener" href="https://detail.tmall.com/item.htm?abbucket=8&id=636758435872&ns=1&spm=a230r.1.14.29.dee3a0b09VhiNh&skuId=5200700886521">569</a></td>
+</tr>
+<tr>
+<td><strong>硬盘</strong></td>
+<td>西部数据黑盘 sn750 500G<em>2    239</em>2  西数机械硬盘1T               439</td>
+<td>80x22x2mm</td>
+<td>10W</td>
+<td>478</td>
+<td></td>
+<td></td>
+<td><a target="_blank" rel="noopener" href="https://detail.tmall.com/item.htm?abbucket=8&id=613322805154&ns=1&skuId=4920962282008&spm=a230r.1.14.16.46b562b4FfMYV0">259</a></td>
+</tr>
+<tr>
+<td><strong>机箱</strong></td>
+<td>乔思伯U4  PLUS</td>
+<td>440 x  210 x 483mm</td>
+<td></td>
+<td>260</td>
+<td></td>
+<td></td>
+<td><a target="_blank" rel="noopener" href="https://detail.tmall.com/item.htm?id=631716570919&skuId=4752493375473">879</a></td>
+</tr>
+<tr>
+<td><strong>电源</strong></td>
+<td>金牌巨龙  GW-6800电竞版(600W)</td>
+<td>150<em>140</em>86mm</td>
+<td>700W</td>
+<td>359</td>
+<td></td>
+<td></td>
+<td><a target="_blank" rel="noopener" href="https://detail.tmall.com/item.htm?abbucket=13&id=563958223508&ns=1&spm=a230r.1.14.1.5bec26efXqkzaI&skuId=5242138315378">350</a></td>
+</tr>
+<tr>
+<td><strong>CPU散热器</strong></td>
+<td>九州风神大霜塔V5</td>
+<td>129<em>136</em>157mm</td>
+<td>200W</td>
+<td>190</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>机箱散热</strong></td>
+<td>利民c12c台式电脑机箱散热</td>
+<td>120<em>120</em>25mm</td>
+<td></td>
+<td>88</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>5535</td>
+<td></td>
+<td></td>
+<td>6280</td>
+</tr>
+</tbody></table>
+<h3 id="CPU"><a href="#CPU" class="headerlink" title="CPU"></a>CPU</h3><h4 id="英特尔-i7-10700K⏩淘宝链接"><a href="#英特尔-i7-10700K⏩淘宝链接" class="headerlink" title="英特尔 i7 10700K⏩淘宝链接"></a>英特尔 i7 10700K⏩<a target="_blank" rel="noopener" href="https://item.taobao.com/item.htm?spm=a230r.1.14.73.2a4718dbQp7eLX&id=576268878093&ns=1&abbucket=13#detail">淘宝链接</a></h4><blockquote>
+<p>i7-10700K 是英特尔第十代酷睿系列的处理器，采用了14纳米工艺，具有8个物理核心和16个线程，主频为3.8 GHz，可加速至最大5.1 GHz。它还配备了16MB的L3缓存，以及内置的UHD Graphics 630显卡。</p>
+<p>总体来说，i7-10700K 是一款性能强劲的处理器，适用于多任务处理和高性能计算。它可以处理大量数据、多线程应用和高负载游戏。不过需要注意的是，这款处理器的功耗相对较高，需要搭配散热器进行散热，同时需要一块支持Z490芯片组的主板来发挥最大性能。</p>
+<p>以下是i7-10700K的详细参数：</p>
+<ul>
+<li>物理核心数：8</li>
+<li>线程数：16</li>
+<li>主频：3.8 GHz</li>
+<li>最大睿频：5.1 GHz</li>
+<li>缓存：16 MB L3</li>
+<li>集成显卡：Intel UHD Graphics 630</li>
+<li>最大支持内存频率：DDR4-2933</li>
+<li>支持的最大PCIe通道数：16</li>
+<li>支持的最大存储器数目：2</li>
+<li>TDP：125 W</li>
+<li>制造工艺：14 nm</li>
+<li>套接字：LGA1200</li>
+</ul>
+<p>最大支持内存频率指的是i7-10700K处理器所支持的内存速度的最高值，即在主板和内存组合支持的情况下，可以使用的最高内存频率。对于i7-10700K，最大支持内存频率为DDR4-2933，这意味着它可以使用支持DDR4-2933及以下频率的内存模块，但如果使用超过该频率的内存模块，则处理器可能无法正常工作，甚至会出现系统稳定性问题。所以在选择内存时，应该选择与i7-10700K处理器相匹配的内存模块，以发挥最佳性能。</p>
+</blockquote>
+<h3 id="CPU风扇"><a href="#CPU风扇" class="headerlink" title="CPU风扇"></a>CPU风扇</h3><h4 id="九州风神大霜塔V5⏩淘宝链接"><a href="#九州风神大霜塔V5⏩淘宝链接" class="headerlink" title="九州风神大霜塔V5⏩淘宝链接"></a>九州风神大霜塔V5⏩<a target="_blank" rel="noopener" href="https://detail.tmall.com/item.htm?abbucket=14&id=15329537344&rn=d87e0cb35e720d7dc1c06cfc751dc77a&skuId=5131517127343&spm=a1z10.5-b-s.w4011-21206908403.52.219e3118J5gxd6">淘宝链接</a></h4><blockquote>
+<p>以下是九州风神大霜塔V5的详细参数：</p>
+<ul>
+<li>尺寸：140mm x 165mm x 165mm（宽 x 长 x     高）</li>
+<li>散热器材质：铝合金 + 镍铜合金</li>
+<li>风扇尺寸：120mm x 120mm x 25mm</li>
+<li>风扇转速：700-1500RPM</li>
+<li>噪音等级：≤26.1dB(A)</li>
+<li>风量：51.15CFM</li>
+<li>散热器重量：1096g</li>
+<li>支持CPU类型：Intel LGA     775&#x2F;115x&#x2F;1366&#x2F;1200&#x2F;2066；AMD AM2&#x2F;AM2+&#x2F;AM3&#x2F;AM3+&#x2F;AM4&#x2F;FM1&#x2F;FM2&#x2F;FM2+</li>
+<li>功率：TDP≤250W</li>
+</ul>
+</blockquote>
+<h3 id="主板"><a href="#主板" class="headerlink" title="主板"></a>主板</h3><h4 id="微星-Z490-A-PRO⏩淘宝链接"><a href="#微星-Z490-A-PRO⏩淘宝链接" class="headerlink" title="微星 Z490-A PRO⏩淘宝链接"></a>微星 Z490-A PRO⏩<a target="_blank" rel="noopener" href="https://item.taobao.com/item.htm?spm=a230r.1.14.16.2a0c71a5fpyOuv&id=691545256695&ns=1&abbucket=13#detail">淘宝链接</a></h4><blockquote>
+<p>微星 Z490-A PRO是一款主打性价比的Intel Z490系列主板，适用于第10代Intel Core处理器。下面是该主板的主要规格和特点：</p>
+<ul>
+<li>CPU支持：适用于第10代Intel Core处理器，包括Intel     Core i9&#x2F;i7&#x2F;i5&#x2F;i3&#x2F;Pentium&#x2F;Celeron处理器。</li>
+<li>内存支持：支持双通道DDR4内存，最高支持128GB内存容量，支持频率达到4800MHz。</li>
+<li>扩展插槽：提供1个PCI-E 3.0 x16插槽、1个PCI-E     3.0 x16插槽（x4模式）、3个PCI-E 3.0 x1插槽。</li>
+<li>存储接口：提供6个SATA     6Gb&#x2F;s接口和2个M.2接口，支持Intel Optane存储技术。</li>
+<li>网络支持：提供Realtek 8111H千兆以太网接口。</li>
+<li>后置I&#x2F;O接口：提供PS&#x2F;2键盘&#x2F;鼠标接口、2个USB     2.0接口、4个USB 3.2 Gen     1接口、1个HDMI接口、1个DisplayPort接口、1个DVI-D接口、1个RJ45千兆网口、6个音频接口。</li>
+<li>其他特点：支持Intel Turbo Boost技术、Intel     Optane内存技术、Intel Rapid Storage技术、Intel Extreme Memory Profile（XMP）等。</li>
+</ul>
+<p>总之，微星 Z490-A PRO主板提供了稳定的性能、丰富的扩展和存储选项、良好的网络连接和音频支持等功能，是一款性价比较高的主板。</p>
+</blockquote>
+<h3 id="显卡"><a href="#显卡" class="headerlink" title="显卡"></a>显卡</h3><h4 id="蓝宝石-RX-6600XT-白金-OC-8G-⏩京东链接⏩淘宝链接"><a href="#蓝宝石-RX-6600XT-白金-OC-8G-⏩京东链接⏩淘宝链接" class="headerlink" title="蓝宝石 RX 6600XT 白金 OC 8G ⏩京东链接⏩淘宝链接"></a>蓝宝石 RX 6600XT 白金 OC 8G ⏩<a target="_blank" rel="noopener" href="https://item.jd.com/10042847168090.html#crumb-wrap">京东链接</a>⏩<a target="_blank" rel="noopener" href="https://item.taobao.com/item.htm?spm=a230r.1.14.21.3ce9d2basUujmN&id=688299817603&ns=1&abbucket=13#detail">淘宝链接</a></h4><blockquote>
+<p>蓝宝石 RX 6600XT 白金 OC 8G是一款AMD显卡，以下是该显卡的主要技术参数：</p>
+<ul>
+<li>显卡核心：AMD Radeon RX 6600 XT</li>
+<li>GPU架构：AMD RDNA 2</li>
+<li>制造工艺：7nm</li>
+<li>流处理器：2048个</li>
+<li>像素填充率：105.0 GP&#x2F;s</li>
+<li>纹理填充率：330.2 GT&#x2F;s</li>
+<li>显存类型：GDDR6</li>
+<li>显存容量：8GB</li>
+<li>显存频率：16 Gbps</li>
+<li>显存位宽：128-bit</li>
+<li>核心时钟：2359 MHz</li>
+<li>游戏时钟：2170 MHz</li>
+<li>加速时钟：2589 MHz</li>
+<li>输出接口：HDMI 2.1、DisplayPort 1.4a</li>
+</ul>
+</blockquote>
+<h3 id="内存"><a href="#内存" class="headerlink" title="内存"></a>内存</h3><h4 id="金士顿32g-3600⏩淘宝链接"><a href="#金士顿32g-3600⏩淘宝链接" class="headerlink" title="金士顿32g 3600⏩淘宝链接"></a>金士顿32g 3600⏩<a target="_blank" rel="noopener" href="https://detail.tmall.com/item.htm?abbucket=8&id=636758435872&ns=1&spm=a230r.1.14.29.dee3a0b09VhiNh&skuId=5036173195789">淘宝链接</a></h4><blockquote>
+<p>Kingston HyperX Fury DDR4 32GB 3600MHz 内存条是一款性价比很高的产品，它的主频较高，具备一定的超频潜力，能够提供出色的性能表现。同时，它还采用了比较高端的散热设计，能够有效地降低温度，提高稳定性，延长使用寿命。总的来说，如果你需要一款价格实惠、性能出色、稳定性高的内存条，这款产品是不错的选择。</p>
+<p>Kingston HyperX Predator DDR4 3600MHz 32GB Kit (HX436C17PB3K2&#x2F;32)。</p>
+<p>这款内存条的主要参数如下：</p>
+<ul>
+<li>容量：32GB</li>
+<li>频率：3600MHz</li>
+<li>类型：DDR4</li>
+<li>时序：CAS延迟为17</li>
+<li>电压：1.35V</li>
+</ul>
+<p>值得一提的是，内存条的性能不仅取决于容量和频率，还受到时序和品牌的影响，因此具体型号可能有所不同。</p>
+</blockquote>
+<h3 id="硬盘"><a href="#硬盘" class="headerlink" title="硬盘"></a>硬盘</h3><h4 id="西部数据黑盘-sn750⏩淘宝链接"><a href="#西部数据黑盘-sn750⏩淘宝链接" class="headerlink" title="西部数据黑盘 sn750⏩淘宝链接"></a>西部数据黑盘 sn750⏩<a target="_blank" rel="noopener" href="https://detail.tmall.com/item.htm?abbucket=8&id=613322805154&ns=1&spm=a230r.1.14.16.46b562b4FfMYV0&skuId=4920962282008">淘宝链接</a></h4><blockquote>
+<p>西部数据黑盘 SN750是一款高性能的M.2 NVMe固态硬盘，采用西部数据的第二代3D NAND闪存技术，并配备了高速的PCIe Gen3 x4接口，支持NVMe 1.3协议。它具有高速的读写性能和低延迟，可用于高性能计算机系统和游戏设备中。</p>
+<p>以下是该产品的主要规格：</p>
+<ul>
+<li>存储容量：250GB、500GB、1TB、2TB</li>
+<li>读取速度：最高可达3,470MB&#x2F;s</li>
+<li>写入速度：最高可达3,000MB&#x2F;s</li>
+<li>随机读取IOPS：最高可达420,000</li>
+<li>随机写入IOPS：最高可达380,000</li>
+<li>芯片类型：西部数据第二代3D NAND闪存</li>
+<li>接口类型：PCIe Gen3 x4，支持NVMe 1.3协议</li>
+<li>尺寸：80mm x 22mm x 2.38mm</li>
+<li>重量：约6.5g</li>
+<li>保修期限：5年</li>
+</ul>
+<p>500GB尺寸：80mm x 22mm x 2.38mm</p>
+</blockquote>
+<h3 id="电源"><a href="#电源" class="headerlink" title="电源"></a>电源</h3><h4 id="金牌巨龙-GW-6800电竞版⏩淘宝链接"><a href="#金牌巨龙-GW-6800电竞版⏩淘宝链接" class="headerlink" title="金牌巨龙 GW-6800电竞版⏩淘宝链接"></a>金牌巨龙 GW-6800电竞版⏩<a target="_blank" rel="noopener" href="https://detail.tmall.com/item.htm?abbucket=13&id=563958223508&ns=1&skuId=4968870296687&spm=a230r.1.14.1.5bec26efXqkzaI">淘宝链接</a></h4><blockquote>
+<p>金牌巨龙 GW-6800电竞版(600W) 的参数如下：</p>
+<ul>
+<li>最大输出功率：600W</li>
+<li>80PLUS认证级别：金牌</li>
+<li>输入电压范围：100V-240V</li>
+<li>输入电流：8A-4A</li>
+<li>额定频率：50Hz-60Hz</li>
+<li>电源尺寸：150mm x 140mm x 86mm</li>
+<li>电源重量：1.9kg</li>
+<li>风扇规格：12cm</li>
+<li>接口类型：20+4PIN主板电源接口、8PIN CPU     12V电源接口、6+2PIN显卡电源接口、SATA电源接口、IDE电源接口</li>
+</ul>
+</blockquote>
+<h3 id="机箱散热扇"><a href="#机箱散热扇" class="headerlink" title="机箱散热扇"></a>机箱散热扇</h3><h4 id="利民c12c⏩淘宝链接"><a href="#利民c12c⏩淘宝链接" class="headerlink" title="利民c12c⏩淘宝链接"></a>利民c12c⏩<a target="_blank" rel="noopener" href="https://detail.tmall.com/item.htm?abbucket=13&id=696173640034&ns=1&skuId=4969728681185&spm=a230r.1.14.1.60bb6616xkIdq0">淘宝链接</a></h4><blockquote>
+<p>品牌：Thermalright型号：TL-C12成色：全新</p>
+<p>风扇尺寸：120<em>120</em>925mm</p>
+</blockquote>
+<h3 id="机箱"><a href="#机箱" class="headerlink" title="机箱"></a>机箱</h3><h4 id="乔思伯-U4-PLUS⏩淘宝链接"><a href="#乔思伯-U4-PLUS⏩淘宝链接" class="headerlink" title="乔思伯 U4 PLUS⏩淘宝链接"></a>乔思伯 U4 PLUS⏩<a target="_blank" rel="noopener" href="https://detail.tmall.com/item.htm?abbucket=13&id=627129781183&ns=1&skuId=4934676450875&spm=a230r.1.14.7.5f2f529dNkj0u8">淘宝链接</a></h4><blockquote>
+<p>乔思伯 U4 PLUS 机箱的主要规格如下：</p>
+<ul>
+<li>尺寸：440 x 210 x 483mm（长 x 宽 x 高）</li>
+<li>重量：5.8kg</li>
+<li>适用主板：ATX、Micro-ATX、Mini-ITX</li>
+<li>扩展槽位：7个PCI插槽</li>
+<li>前置接口：2 x USB 2.0、2 x USB 3.0、1 x     麦克风接口、1 x 音频输出接口</li>
+<li>硬盘位：2 x 3.5英寸、2 x 2.5英寸</li>
+<li>散热系统：支持120&#x2F;140mm水冷排，最大支持高度160mm的CPU风冷</li>
+</ul>
+<p>其他特性：透明侧板、内部灯光效果、支持多种尺寸显卡、背线管理设计等</p>
+</blockquote>
+<h2 id="配置二"><a href="#配置二" class="headerlink" title="配置二"></a><strong>配置二</strong></h2><div style="text-align: center">
+  <div class="github-card"
+    data-user="nickw444"
+    data-repo="opencore-efi-z590"
+    data-height="120"
+    data-width="780"
+    data-theme="default"
+    data-target=""
+    data-client-id=""
+    data-client-secret=""
+  ></div>
+</div>
+<script src="/works/github-card-lib/githubcard.js"></script>
+
+
+<table>
+<thead>
+<tr>
+<th><strong>部件</strong></th>
+<th><strong>选品名称</strong></th>
+<th><strong>价格（元）</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>cpu</strong></td>
+<td>英特尔  i7 11700K</td>
+<td><a target="_blank" rel="noopener" href="https://item.taobao.com/item.htm?spm=a21n57.1.0.0.71f1523cgp4zlN&id=677704141190&ns=1&abbucket=7#detail"><strong>1780.00</strong></a></td>
+</tr>
+<tr>
+<td><strong>主板</strong></td>
+<td>微星  Z590-A PRO</td>
+<td><a target="_blank" rel="noopener" href="https://item.taobao.com/item.htm?spm=a21n57.1.0.0.41bd523c7qOfWM&id=692403326140&ns=1&abbucket=7#detail">539</a></td>
+</tr>
+<tr>
+<td><strong>显卡</strong></td>
+<td>3060ti</td>
+<td><a target="_blank" rel="noopener" href="https://item.taobao.com/item.htm?spm=a21n57.1.0.0.71f1523cgp4zlN&id=683858271080&ns=1&abbucket=7#detail">1908</a></td>
+</tr>
+<tr>
+<td><strong>内存</strong></td>
+<td>金士顿32g  3600 单条</td>
+<td><a target="_blank" rel="noopener" href="https://detail.tmall.com/item.htm?abbucket=8&id=636758435872&ns=1&spm=a230r.1.14.29.dee3a0b09VhiNh&skuId=5200700886521">569</a></td>
+</tr>
+<tr>
+<td><strong>硬盘</strong></td>
+<td>西部数据黑盘  sn750 500G</td>
+<td><a target="_blank" rel="noopener" href="https://detail.tmall.com/item.htm?abbucket=8&id=613322805154&ns=1&skuId=4920962282008&spm=a230r.1.14.16.46b562b4FfMYV0">299</a></td>
+</tr>
+<tr>
+<td><strong>机箱</strong></td>
+<td>乔思伯U5  PLUS</td>
+<td><a target="_blank" rel="noopener" href="https://detail.tmall.com/item.htm?id=631716570919&skuId=4752493375473">879</a></td>
+</tr>
+<tr>
+<td><strong>电源</strong></td>
+<td>金牌巨龙  GW-6800电竞版(600W)</td>
+<td><a target="_blank" rel="noopener" href="https://detail.tmall.com/item.htm?abbucket=13&id=563958223508&ns=1&spm=a230r.1.14.1.5bec26efXqkzaI&skuId=5242138315378">350</a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>6324</td>
+</tr>
+</tbody></table>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="red signal">Red Signals</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://red-signals.github.io/Works/2023/11/13/%E9%BB%91%E8%8B%B9%E6%9E%9C%E6%A1%88%E4%BE%8B%E4%B8%80/">https://red-signals.github.io/Works/2023/11/13/黑苹果案例一/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://red-signals.github.io/Works" target="_blank">Works</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/works/tags/%E9%BB%91%E8%8B%B9%E6%9E%9C/">黑苹果</a></div><div class="post_share"><div class="social-share" data-image="/works/../works/img/cover/desk.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>赞助</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/works/img/%E5%BE%AE%E4%BF%A1.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/works/img/%E5%BE%AE%E4%BF%A1.jpg" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/works/img/%E6%94%AF%E4%BB%98%E5%AE%9D.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/works/img/%E6%94%AF%E4%BB%98%E5%AE%9D.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/works/2023/11/13/mac/" title="Mac系统"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/works/../works/img/cover/16907360871328.jpg" onerror="onerror=null;src='/works/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Mac系统</div></div></a></div><div class="next-post pull-right"><a href="/works/2023/11/13/macos%E8%99%9A%E6%8B%9F%E6%9C%BA/" title="MacOs虚拟机"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/works/../works/img/cover/3c4f26ba56a04fdba08a025cb22107f7~tplv-pk90l89vgd-crop-center_1920_1080.jpg" onerror="onerror=null;src='/works/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">MacOs虚拟机</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/works/2024/04/29/%E9%BB%91%E8%8B%B9%E6%9E%9C%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E6%A6%82%E8%A7%88/" title="黑苹果系统安装概览"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/works/../works/img/cover/mac-boot-camp.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-04-29</div><div class="title">黑苹果系统安装概览</div></div></a></div><div><a href="/works/2024/01/03/Thinkpad%20e530%20%E9%BB%91%E8%8B%B9%E6%9E%9C/" title="Thinkpad e530 黑苹果"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/works/../works/img/cover/sdfds.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-01-03</div><div class="title">Thinkpad e530 黑苹果</div></div></a></div></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div class="comment-switch"><span class="first-comment">Waline</span><span id="switch-btn"></span><span class="second-comment">Utterances</span></div></div><div class="comment-wrap"><div><div id="waline-wrap"></div></div><div><div id="utterances-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/works/img/works%E5%A4%B4%E5%83%8F.png" onerror="this.onerror=null;this.src='/works/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Red Signals</div><div class="author-info__description">胜人者有力，自胜者强</div></div><div class="card-info-data site-data is-center"><a href="/works/archives/"><div class="headline">文章</div><div class="length-num">41</div></a><a href="/works/tags/"><div class="headline">标签</div><div class="length-num">21</div></a><a href="/works/categories/"><div class="headline">分类</div><div class="length-num">20</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/red-signals"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/red-signals" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="/works/aimeikeji135@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">知人者智，自知者明</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E4%B8%80"><span class="toc-number">1.</span> <span class="toc-text">配置一</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#CPU"><span class="toc-number">1.1.</span> <span class="toc-text">CPU</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%8B%B1%E7%89%B9%E5%B0%94-i7-10700K%E2%8F%A9%E6%B7%98%E5%AE%9D%E9%93%BE%E6%8E%A5"><span class="toc-number">1.1.1.</span> <span class="toc-text">英特尔 i7 10700K⏩淘宝链接</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CPU%E9%A3%8E%E6%89%87"><span class="toc-number">1.2.</span> <span class="toc-text">CPU风扇</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B9%9D%E5%B7%9E%E9%A3%8E%E7%A5%9E%E5%A4%A7%E9%9C%9C%E5%A1%94V5%E2%8F%A9%E6%B7%98%E5%AE%9D%E9%93%BE%E6%8E%A5"><span class="toc-number">1.2.1.</span> <span class="toc-text">九州风神大霜塔V5⏩淘宝链接</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E6%9D%BF"><span class="toc-number">1.3.</span> <span class="toc-text">主板</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BE%AE%E6%98%9F-Z490-A-PRO%E2%8F%A9%E6%B7%98%E5%AE%9D%E9%93%BE%E6%8E%A5"><span class="toc-number">1.3.1.</span> <span class="toc-text">微星 Z490-A PRO⏩淘宝链接</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%98%BE%E5%8D%A1"><span class="toc-number">1.4.</span> <span class="toc-text">显卡</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%93%9D%E5%AE%9D%E7%9F%B3-RX-6600XT-%E7%99%BD%E9%87%91-OC-8G-%E2%8F%A9%E4%BA%AC%E4%B8%9C%E9%93%BE%E6%8E%A5%E2%8F%A9%E6%B7%98%E5%AE%9D%E9%93%BE%E6%8E%A5"><span class="toc-number">1.4.1.</span> <span class="toc-text">蓝宝石 RX 6600XT 白金 OC 8G ⏩京东链接⏩淘宝链接</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%85%E5%AD%98"><span class="toc-number">1.5.</span> <span class="toc-text">内存</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%87%91%E5%A3%AB%E9%A1%BF32g-3600%E2%8F%A9%E6%B7%98%E5%AE%9D%E9%93%BE%E6%8E%A5"><span class="toc-number">1.5.1.</span> <span class="toc-text">金士顿32g 3600⏩淘宝链接</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A1%AC%E7%9B%98"><span class="toc-number">1.6.</span> <span class="toc-text">硬盘</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A5%BF%E9%83%A8%E6%95%B0%E6%8D%AE%E9%BB%91%E7%9B%98-sn750%E2%8F%A9%E6%B7%98%E5%AE%9D%E9%93%BE%E6%8E%A5"><span class="toc-number">1.6.1.</span> <span class="toc-text">西部数据黑盘 sn750⏩淘宝链接</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%B5%E6%BA%90"><span class="toc-number">1.7.</span> <span class="toc-text">电源</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%87%91%E7%89%8C%E5%B7%A8%E9%BE%99-GW-6800%E7%94%B5%E7%AB%9E%E7%89%88%E2%8F%A9%E6%B7%98%E5%AE%9D%E9%93%BE%E6%8E%A5"><span class="toc-number">1.7.1.</span> <span class="toc-text">金牌巨龙 GW-6800电竞版⏩淘宝链接</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%BA%E7%AE%B1%E6%95%A3%E7%83%AD%E6%89%87"><span class="toc-number">1.8.</span> <span class="toc-text">机箱散热扇</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%A9%E6%B0%91c12c%E2%8F%A9%E6%B7%98%E5%AE%9D%E9%93%BE%E6%8E%A5"><span class="toc-number">1.8.1.</span> <span class="toc-text">利民c12c⏩淘宝链接</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%BA%E7%AE%B1"><span class="toc-number">1.9.</span> <span class="toc-text">机箱</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B9%94%E6%80%9D%E4%BC%AF-U4-PLUS%E2%8F%A9%E6%B7%98%E5%AE%9D%E9%93%BE%E6%8E%A5"><span class="toc-number">1.9.1.</span> <span class="toc-text">乔思伯 U4 PLUS⏩淘宝链接</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E4%BA%8C"><span class="toc-number">2.</span> <span class="toc-text">配置二</span></a></li></ol></div></div><div class="card-widget card-post-series"><div class="item-headline"><i class="fa-solid fa-layer-group"></i><span>黑苹果</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/works/2024/04/29/%E9%BB%91%E8%8B%B9%E6%9E%9C%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E6%A6%82%E8%A7%88/" title="黑苹果系统安装概览"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/works/../works/img/cover/mac-boot-camp.jpg" onerror="this.onerror=null;this.src='/works/img/404.jpg'" alt="黑苹果系统安装概览"></a><div class="content"><a class="title" href="/works/2024/04/29/%E9%BB%91%E8%8B%B9%E6%9E%9C%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E6%A6%82%E8%A7%88/" title="黑苹果系统安装概览">黑苹果系统安装概览</a><time datetime="2024-04-29T04:58:31.299Z" title="发表于 2024-04-29 12:58:31">2024-04-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/works/2024/01/03/Thinkpad%20e530%20%E9%BB%91%E8%8B%B9%E6%9E%9C/" title="Thinkpad e530 黑苹果"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/works/../works/img/cover/sdfds.jpg" onerror="this.onerror=null;this.src='/works/img/404.jpg'" alt="Thinkpad e530 黑苹果"></a><div class="content"><a class="title" href="/works/2024/01/03/Thinkpad%20e530%20%E9%BB%91%E8%8B%B9%E6%9E%9C/" title="Thinkpad e530 黑苹果">Thinkpad e530 黑苹果</a><time datetime="2024-01-03T15:15:41.000Z" title="发表于 2024-01-03 23:15:41">2024-01-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/works/2023/11/13/%E9%BB%91%E8%8B%B9%E6%9E%9C%E6%A1%88%E4%BE%8B%E4%B8%80/" title="黑苹果硬件配置"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/works/../works/img/cover/desk.jpg" onerror="this.onerror=null;this.src='/works/img/404.jpg'" alt="黑苹果硬件配置"></a><div class="content"><a class="title" href="/works/2023/11/13/%E9%BB%91%E8%8B%B9%E6%9E%9C%E6%A1%88%E4%BE%8B%E4%B8%80/" title="黑苹果硬件配置">黑苹果硬件配置</a><time datetime="2023-11-13T07:49:41.000Z" title="发表于 2023-11-13 15:49:41">2023-11-13</time></div></div></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/works/2024/05/22/hello-world/" title="Hello World"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/works/img/red%20signalhexo%20%E9%A6%96%E9%A1%B5.jpg" onerror="this.onerror=null;this.src='/works/img/404.jpg'" alt="Hello World"/></a><div class="content"><a class="title" href="/works/2024/05/22/hello-world/" title="Hello World">Hello World</a><time datetime="2024-05-22T01:24:44.068Z" title="发表于 2024-05-22 09:24:44">2024-05-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/works/2024/04/29/%E9%BB%91%E8%8B%B9%E6%9E%9C%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E6%A6%82%E8%A7%88/" title="黑苹果系统安装概览"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/works/../works/img/cover/mac-boot-camp.jpg" onerror="this.onerror=null;this.src='/works/img/404.jpg'" alt="黑苹果系统安装概览"/></a><div class="content"><a class="title" href="/works/2024/04/29/%E9%BB%91%E8%8B%B9%E6%9E%9C%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E6%A6%82%E8%A7%88/" title="黑苹果系统安装概览">黑苹果系统安装概览</a><time datetime="2024-04-29T04:58:31.299Z" title="发表于 2024-04-29 12:58:31">2024-04-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/works/2024/04/29/%E8%8B%B9%E6%9E%9Ccms/" title="苹果CMS"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/works/../works/img/cover/maxresdefault.jpg" onerror="this.onerror=null;this.src='/works/img/404.jpg'" alt="苹果CMS"/></a><div class="content"><a class="title" href="/works/2024/04/29/%E8%8B%B9%E6%9E%9Ccms/" title="苹果CMS">苹果CMS</a><time datetime="2024-04-29T04:58:31.298Z" title="发表于 2024-04-29 12:58:31">2024-04-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/works/2024/04/29/%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF/" title="宝塔面板相关命令"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/works/../works/img/cover/images2.jpg" onerror="this.onerror=null;this.src='/works/img/404.jpg'" alt="宝塔面板相关命令"/></a><div class="content"><a class="title" href="/works/2024/04/29/%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF/" title="宝塔面板相关命令">宝塔面板相关命令</a><time datetime="2024-04-29T04:58:31.295Z" title="发表于 2024-04-29 12:58:31">2024-04-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/works/2024/04/29/win%20%E5%90%88%E9%9B%86/" title="Win 合集"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/works/../works/img/cover/seees.jpg" onerror="this.onerror=null;this.src='/works/img/404.jpg'" alt="Win 合集"/></a><div class="content"><a class="title" href="/works/2024/04/29/win%20%E5%90%88%E9%9B%86/" title="Win 合集">Win 合集</a><time datetime="2024-04-29T04:58:31.287Z" title="发表于 2024-04-29 12:58:31">2024-04-29</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/works/../works/img/cover/desk.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By Red Signals</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi, welcome to my <a target="_blank" rel="noopener" href="https://butterfly.js.org/">blog</a>!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="translateLink" type="button" title="简繁转换">简</button><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="chat-btn" type="button" title="聊天"><i class="fas fa-sms"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/works/js/utils.js?v=4.13.0"></script><script src="/works/js/main.js?v=4.13.0"></script><script src="/works/js/tw_cn.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@5.2.0/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.8/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar@0.1.16/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.1
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, '']
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.min.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typesetPromise()
+}</script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/copy-tex.min.js"></script><script>(() => {
+  document.querySelectorAll('#article-container span.katex-display').forEach(item => {
+    btf.wrap(item, 'div', { class: 'katex-wrap'})
+  })
+})()</script><script>(() => {
+  const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+  if ($mermaid.length === 0) return
+  const runMermaid = () => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+    Array.from($mermaid).forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
+      const mermaidID = 'mermaid-' + index
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+
+      const renderV10 = () => {
+        renderFn.then(({svg}) => {
+          mermaidSrc.insertAdjacentHTML('afterend', svg)
+        })
+      }
+
+      const renderV9 = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
+
+      typeof renderFn === 'string' ? renderV9(renderFn) : renderV10()
+    })
+  }
+
+  const loadMermaid = () => {
+    window.loadMermaid ? runMermaid() : getScript('https://cdn.jsdelivr.net/npm/mermaid@10.8.0/dist/mermaid.min.js').then(runMermaid)
+  }
+
+  btf.addGlobalFn('themeChange', runMermaid, 'mermaid')
+
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script><script>(() => {
+  const abcjsInit = () => {
+    const abcjsFn = () => {
+      document.querySelectorAll(".abc-music-sheet").forEach(ele => {
+        ABCJS.renderAbc(ele, ele.innerHTML, {responsive: 'resize'})
+      })
+    }
+    
+    typeof ABCJS === 'object' ? abcjsFn()
+      : getScript('https://cdn.jsdelivr.net/npm/abcjs@6.3.0/dist/abcjs-basic-min.min.js').then(abcjsFn)
+  }
+
+  window.pjax ? abcjsInit() : window.addEventListener('load', abcjsInit)
+})()</script><script>(() => {
+  let initFn = window.walineFn || null
+
+  const initWaline = (Fn) => {
+    const waline = Fn(Object.assign({
+      el: '#waline-wrap',
+      serverURL: 'https://waline-1-s1845543.deta.app/',
+      pageview: false,
+      dark: 'html[data-theme="dark"]',
+      path: window.location.pathname,
+      comment: false,
+    }, null))
+
+    const destroyWaline = () => {
+      waline.destroy()
+    }
+
+    btf.addGlobalFn('pjax', destroyWaline, 'destroyWaline')
+  }
+
+  const loadWaline = async () => {
+    if (initFn) initWaline(initFn)
+    else {
+      await getCSS('https://cdn.jsdelivr.net/npm/@waline/client@3.1.2/dist/waline.min.css')
+      const { init } = await import('https://cdn.jsdelivr.net/npm/@waline/client@3.1.2/dist/waline.min.js')
+      initFn = init || Waline.init
+      initWaline(initFn)
+      window.walineFn = initFn
+    }
+  }
+
+  if ('Waline' === 'Waline' || !true) {
+    if (true) btf.loadComment(document.getElementById('waline-wrap'),loadWaline)
+    else setTimeout(loadWaline, 0)
+  } else {
+    window.loadOtherComment = loadWaline
+  }
+})()</script><script>(() => {
+  const loadUtterances = () => {
+    let ele = document.createElement('script')
+    ele.id = 'utterances_comment'
+    ele.src = 'https://utteranc.es/client.js'
+    ele.setAttribute('repo', 'red-signalA/red-signalA.github.io')
+    ele.setAttribute('issue-term', 'pathname')
+    const nowTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'photon-dark' : 'github-light'
+    ele.setAttribute('theme', nowTheme)
+    ele.crossOrigin = 'anonymous'
+    ele.async = true
+    document.getElementById('utterances-wrap').appendChild(ele)
+  }
+
+  const utterancesTheme = theme => {
+    const iframe = document.querySelector('.utterances-frame')
+    if (iframe) {
+      const theme = theme === 'dark' ? 'photon-dark' : 'github-light'
+      const message = {
+        type: 'set-theme',
+        theme: theme
+      };
+      iframe.contentWindow.postMessage(message, 'https://utteranc.es');
+    }
+  }
+
+  btf.addGlobalFn('themeChange', utterancesTheme, 'utterances')
+
+  if ('Waline' === 'Utterances' || !true) {
+    if (true) btf.loadComment(document.getElementById('utterances-wrap'), loadUtterances)
+    else loadUtterances()
+  } else {
+    window.loadOtherComment = loadUtterances
+  }
+})()</script></div><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/canvas-nest.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = true;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/click-show-text.min.js" data-mobile="true" data-text="自由,公平,正义" data-fontsize="15px" data-random="true" async="async"></script><script>(() => {
+  const isChatBtn = true
+  const isChatHideShow = false
+
+  if (isChatBtn) {
+    const close = () => {
+      Chatra('minimizeWidget')
+      Chatra('hide')
+    }
+
+    const open = () => {
+      Chatra('openChat', true)
+      Chatra('show')
+    }
+
+    window.ChatraSetup = {
+      startHidden: true
+    }
+  
+    window.chatBtnFn = () => {
+      const isShow = document.getElementById('chatra').classList.contains('chatra--expanded')
+      isShow ? close() : open()
+    }
+  } else if (isChatHideShow) {
+    window.chatBtn = {
+      hide: () => {
+        Chatra('hide')
+      },
+      show: () => {
+        Chatra('show')
+      }
+    }
+  }
+
+  (function(d, w, c) {
+    w.ChatraID = 'DqdzwBi5uYM8cBpEy'
+    var s = d.createElement('script')
+    w[c] = w[c] || function() {
+        (w[c].q = w[c].q || []).push(arguments)
+    }
+    s.async = true
+    s.src = 'https://call.chatra.io/chatra.js'
+    if (d.head) d.head.appendChild(s)
+  })(document, window, 'Chatra')
+
+})()</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/metingjs/dist/Meting.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/works/js/search/local-search.js?v=4.13.0"></script></div></div><!-- hexo injector body_end start -->
+<script src="/works/js/collapse.js"></script>
+<!-- hexo injector body_end end --><script src="/works/js/markmap.js"></script></body></html>
