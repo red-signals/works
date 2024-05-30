@@ -1,0 +1,1011 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><!-- hexo injector head_begin start -->
+<link rel="stylesheet" href="/works/css/bilicard.css">
+<style type="text/css">.douban-card-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-height: 400px;
+}
+
+.douban-card {
+    display: flex;
+    margin: 30px 10px;
+    padding: 15px;
+    border-radius: 15px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: antiquewhite;
+    text-decoration: none;
+}
+
+.douban-card:hover {
+    text-decoration: none;
+}
+
+.douban-card-bgimg {
+    position: absolute;
+    width: 115%;
+    height: 115%;
+    filter: blur(15px) brightness(0.6);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.douban-card-img {
+    position: relative;
+    height: 130px;
+    width: 80px;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.douban-card-left:hover .douban-card-img {
+    filter: blur(5px) brightness(0.6);
+    transform: perspective(800px) rotateX(180deg);
+}
+
+.douban-card-left .douban-card-img {
+    transition: all 500ms ease;
+}
+
+.douban-card-left {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.douban-card-left .douban-card-status {
+    height: 130px;
+    width: 80px;
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 30%;
+    transform: rotateX(180deg);
+    backface-visibility: hidden;
+    transition: all 500ms ease;
+}
+
+.douban-card-left:hover .douban-card-status {
+    transform: perspective(800px) rotateX(0deg);
+}
+
+.douban-card-right {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: 12px;
+    font-size: 16px;
+    font-family: "Courier New", Courier, monospace;
+    line-height: 1.3;
+    color: antiquewhite;
+}
+
+.douban-card-item {
+    margin-top: 4px;
+}
+</style><!-- hexo injector head_begin end --><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Gitbook插件 | Works</title><meta name="author" content="Red Signals"><meta name="copyright" content="Red Signals"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="安装插件命令：  1gitbook init  book.js文件需要放在gitbook项目目录中  常用插件   插件名 安装命令 功能    accordion npm i  gitbook-plugin-accordion 手风琴-折叠内容段落   hide-element(插件没有效果) npm i  gitbook-plugin-hide-element 隐藏类名   code npm">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Gitbook插件">
+<meta property="og:url" content="https://red-signals.github.io/Works/2024/03/18/gitbook%E6%8F%92%E4%BB%B6/index.html">
+<meta property="og:site_name" content="Works">
+<meta property="og:description" content="安装插件命令：  1gitbook init  book.js文件需要放在gitbook项目目录中  常用插件   插件名 安装命令 功能    accordion npm i  gitbook-plugin-accordion 手风琴-折叠内容段落   hide-element(插件没有效果) npm i  gitbook-plugin-hide-element 隐藏类名   code npm">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://red-signals.github.io/Works/img/works%E4%B8%BB%E5%9B%BE.jpg">
+<meta property="article:published_time" content="2024-03-18T06:44:09.866Z">
+<meta property="article:modified_time" content="2024-05-29T02:59:17.657Z">
+<meta property="article:author" content="Red Signals">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://red-signals.github.io/Works/img/works%E4%B8%BB%E5%9B%BE.jpg"><link rel="shortcut icon" href="/works/img/works%E5%A4%B4%E5%83%8F.png"><link rel="canonical" href="https://red-signals.github.io/Works/2024/03/18/gitbook%E6%8F%92%E4%BB%B6/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.clarity.ms"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/works/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>(function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+})(window, document, "clarity", "script", "lfvkwtllmi");</script><script>const GLOBAL_CONFIG = {
+  root: '/works/',
+  algolia: undefined,
+  localSearch: {"path":"/works/search.xml","preload":true,"top_n_per_article":1,"unescape":true,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: Red Signals","link":"链接: ","source":"来源: Works","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'mediumZoom',
+  Snackbar: {"chs_to_cht":"你已切换为繁体中文","cht_to_chs":"你已切换为简体中文","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"top-center"},
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: true,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Gitbook插件',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-05-29 10:59:17'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 8 || hour >= 22
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><link rel="stylesheet" href="/config/css/custom.css"><link rel="stylesheet" href="/works/config/css/custom.css"><!-- hexo injector head_end start -->
+<link rel="stylesheet" href="/works/css/collapse.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-double-row-display@1.00/cardlistpost.min.css"/>
+<style>#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags:before {content:"\A";
+  white-space: pre;}#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags > .article-meta__separator{display:none}</style>
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head><body><script>window.paceOptions = {
+  restartOnPushState: false
+}
+
+document.addEventListener('pjax:send', () => {
+  Pace.restart()
+})
+</script><link rel="stylesheet" href="/works/css/center-simple.css"/><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/works/img/works%E5%A4%B4%E5%83%8F.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/works/archives/"><div class="headline">文章</div><div class="length-num">61</div></a><a href="/works/tags/"><div class="headline">标签</div><div class="length-num">24</div></a><a href="/works/categories/"><div class="headline">分类</div><div class="length-num">24</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="https://red-signals.github.io/work"><i class="fa-fw fas fa-solid fa-street-view"></i><span> Work</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-cogs fa-fade"></i><span> 系统</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/works/%E7%B3%BB%E7%BB%9F/Win/"><i class="fa-fw fas fa-brands fa-windows"></i><span> Win</span></a></li><li><a class="site-page child" href="/works/%E7%B3%BB%E7%BB%9F/Mac/"><i class="fa-fw fas fa-brands fa-apple"></i><span> Mac</span></a></li><li><a class="site-page child" href="/works/%E7%B3%BB%E7%BB%9F/Linux/"><i class="fa-fw fab fa-linux"></i><span> Linux</span></a></li><li><a class="site-page child" href="/works/%E7%B3%BB%E7%BB%9F/Phone/"><i class="fa-fw fas fa-mobile-alt"></i><span> Phone</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-globe fa-fade"></i><span> 网络</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/works/%E7%BD%91%E7%BB%9C/Github/"><i class="fa-fw fab fa-github"></i><span> Github</span></a></li><li><a class="site-page child" href="/works/%E7%BD%91%E7%BB%9C/Vmware/"><i class="fa-fw fas fa-server"></i><span> Vmware</span></a></li><li><a class="site-page child" href="/works/%E7%BD%91%E7%BB%9C/Phpstudy/"><i class="fa-fw fas fa-book"></i><span> Phpstudy</span></a></li><li><a class="site-page child" href="/works/%E7%BD%91%E7%BB%9C/%E6%9C%8D%E5%8A%A1%E5%99%A8/"><i class="fa-fw fas fa-server"></i><span> 服务器</span></a></li><li><a class="site-page child" href="/works/%E7%BD%91%E7%BB%9C/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"><i class="fa-fw fas fa-shield-alt"></i><span> 科学上网</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-shopping-cart fa-fade"></i><span> 网店</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/works/%E7%BD%91%E5%BA%97/%E5%B9%B3%E5%8F%B0/"><i class="fa-fw fas fa-store"></i><span> 平台</span></a></li><li><a class="site-page child" href="/works/%E7%BD%91%E5%BA%97/%E5%95%86%E5%93%81/"><i class="fa-fw fas fa-tag"></i><span> 商品</span></a></li><li><a class="site-page child" href="/works/%E7%BD%91%E5%BA%97/%E8%BF%90%E8%90%A5/"><i class="fa-fw fas fa-cogs"></i><span> 运营</span></a></li><li><a class="site-page child" href="/works/%E7%BD%91%E5%BA%97/%E5%B7%A5%E5%85%B7/"><i class="fa-fw fas fa-wrench"></i><span> 工具</span></a></li><li><a class="site-page child" href="/works/%E7%BD%91%E5%BA%97/%E7%94%9F%E4%BA%A7%E8%B5%84%E6%96%99/"><i class="fa-fw fas fa-industry"></i><span> 生产资料</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-money-bill-wave fa-fade"></i><span> 网赚</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/works/%E7%BD%91%E8%B5%9A/%E7%BA%BF%E6%8A%A5/"><i class="fa-fw fas fa-newspaper"></i><span> 线报</span></a></li><li><a class="site-page child" href="/works/%E7%BD%91%E8%B5%9A/%E5%B7%A5%E5%85%B7/"><i class="fa-fw fas fa-tools"></i><span> 工具</span></a></li><li><a class="site-page child" href="/works/%E7%BD%91%E8%B5%9A/%E7%94%9F%E4%BA%A7%E8%B5%84%E6%96%99/"><i class="fa-fw fas fa-industry"></i><span> 生产资料</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-bullhorn fa-fade"></i><span> 自媒体</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/works/%E8%87%AA%E5%AA%92%E4%BD%93/%E5%B9%B3%E5%8F%B0/"><i class="fa-fw fas fa-broadcast-tower"></i><span> 平台</span></a></li><li><a class="site-page child" href="/works/%E8%87%AA%E5%AA%92%E4%BD%93/%E5%86%85%E5%AE%B9/"><i class="fa-fw fas fa-file-alt"></i><span> 内容</span></a></li><li><a class="site-page child" href="/works/%E8%87%AA%E5%AA%92%E4%BD%93/%E5%B7%A5%E5%85%B7/"><i class="fa-fw fas fa-tools"></i><span> 工具</span></a></li><li><a class="site-page child" href="/works/%E8%87%AA%E5%AA%92%E4%BD%93/%E7%94%9F%E4%BA%A7%E8%B5%84%E6%96%99/"><i class="fa-fw fas fa-industry"></i><span> 生产资料</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list-check"></i><span> 功能</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/works/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/works/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/works/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page child" href="/works/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></li><li><a class="site-page child" href="/works/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url('/works/img/works%E4%B8%BB%E5%9B%BE.jpg')"><nav id="nav"><span id="blog-info"><a href="/works/" title="Works"><img class="site-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/works/img/works%E5%A4%B4%E5%83%8F.png"/></a></span><div id="menus"></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="https://red-signals.github.io/work"><i class="fa-fw fas fa-solid fa-street-view"></i><span> Work</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-cogs fa-fade"></i><span> 系统</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/works/%E7%B3%BB%E7%BB%9F/Win/"><i class="fa-fw fas fa-brands fa-windows"></i><span> Win</span></a></li><li><a class="site-page child" href="/works/%E7%B3%BB%E7%BB%9F/Mac/"><i class="fa-fw fas fa-brands fa-apple"></i><span> Mac</span></a></li><li><a class="site-page child" href="/works/%E7%B3%BB%E7%BB%9F/Linux/"><i class="fa-fw fab fa-linux"></i><span> Linux</span></a></li><li><a class="site-page child" href="/works/%E7%B3%BB%E7%BB%9F/Phone/"><i class="fa-fw fas fa-mobile-alt"></i><span> Phone</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-globe fa-fade"></i><span> 网络</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/works/%E7%BD%91%E7%BB%9C/Github/"><i class="fa-fw fab fa-github"></i><span> Github</span></a></li><li><a class="site-page child" href="/works/%E7%BD%91%E7%BB%9C/Vmware/"><i class="fa-fw fas fa-server"></i><span> Vmware</span></a></li><li><a class="site-page child" href="/works/%E7%BD%91%E7%BB%9C/Phpstudy/"><i class="fa-fw fas fa-book"></i><span> Phpstudy</span></a></li><li><a class="site-page child" href="/works/%E7%BD%91%E7%BB%9C/%E6%9C%8D%E5%8A%A1%E5%99%A8/"><i class="fa-fw fas fa-server"></i><span> 服务器</span></a></li><li><a class="site-page child" href="/works/%E7%BD%91%E7%BB%9C/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"><i class="fa-fw fas fa-shield-alt"></i><span> 科学上网</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-shopping-cart fa-fade"></i><span> 网店</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/works/%E7%BD%91%E5%BA%97/%E5%B9%B3%E5%8F%B0/"><i class="fa-fw fas fa-store"></i><span> 平台</span></a></li><li><a class="site-page child" href="/works/%E7%BD%91%E5%BA%97/%E5%95%86%E5%93%81/"><i class="fa-fw fas fa-tag"></i><span> 商品</span></a></li><li><a class="site-page child" href="/works/%E7%BD%91%E5%BA%97/%E8%BF%90%E8%90%A5/"><i class="fa-fw fas fa-cogs"></i><span> 运营</span></a></li><li><a class="site-page child" href="/works/%E7%BD%91%E5%BA%97/%E5%B7%A5%E5%85%B7/"><i class="fa-fw fas fa-wrench"></i><span> 工具</span></a></li><li><a class="site-page child" href="/works/%E7%BD%91%E5%BA%97/%E7%94%9F%E4%BA%A7%E8%B5%84%E6%96%99/"><i class="fa-fw fas fa-industry"></i><span> 生产资料</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-money-bill-wave fa-fade"></i><span> 网赚</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/works/%E7%BD%91%E8%B5%9A/%E7%BA%BF%E6%8A%A5/"><i class="fa-fw fas fa-newspaper"></i><span> 线报</span></a></li><li><a class="site-page child" href="/works/%E7%BD%91%E8%B5%9A/%E5%B7%A5%E5%85%B7/"><i class="fa-fw fas fa-tools"></i><span> 工具</span></a></li><li><a class="site-page child" href="/works/%E7%BD%91%E8%B5%9A/%E7%94%9F%E4%BA%A7%E8%B5%84%E6%96%99/"><i class="fa-fw fas fa-industry"></i><span> 生产资料</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-bullhorn fa-fade"></i><span> 自媒体</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/works/%E8%87%AA%E5%AA%92%E4%BD%93/%E5%B9%B3%E5%8F%B0/"><i class="fa-fw fas fa-broadcast-tower"></i><span> 平台</span></a></li><li><a class="site-page child" href="/works/%E8%87%AA%E5%AA%92%E4%BD%93/%E5%86%85%E5%AE%B9/"><i class="fa-fw fas fa-file-alt"></i><span> 内容</span></a></li><li><a class="site-page child" href="/works/%E8%87%AA%E5%AA%92%E4%BD%93/%E5%B7%A5%E5%85%B7/"><i class="fa-fw fas fa-tools"></i><span> 工具</span></a></li><li><a class="site-page child" href="/works/%E8%87%AA%E5%AA%92%E4%BD%93/%E7%94%9F%E4%BA%A7%E8%B5%84%E6%96%99/"><i class="fa-fw fas fa-industry"></i><span> 生产资料</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list-check"></i><span> 功能</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/works/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/works/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/works/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page child" href="/works/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></li><li><a class="site-page child" href="/works/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></li></ul></div></div><div id="nav-right"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Gitbook插件</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-03-18T06:44:09.866Z" title="发表于 2024-03-18 14:44:09">2024-03-18</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-05-29T02:59:17.657Z" title="更新于 2024-05-29 10:59:17">2024-05-29</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/works/categories/%E7%BD%91%E7%BB%9C/">网络</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/works/categories/%E7%BD%91%E7%BB%9C/Github/">Github</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/works/categories/%E7%BD%91%E7%BB%9C/Github/Github-Page/">Github Page</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/works/categories/%E7%BD%91%E7%BB%9C/Github/Github-Page/Gitbook/">Gitbook</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">4.4k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>19分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Gitbook插件"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><blockquote>
+<p>安装插件命令： </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gitbook init</span><br></pre></td></tr></table></figure>
+
+<p>book.js文件需要放在gitbook项目目录中</p>
+</blockquote>
+<h2 id="常用插件"><a href="#常用插件" class="headerlink" title="常用插件"></a><strong>常用插件</strong></h2><table>
+<thead>
+<tr>
+<th><strong>插件名</strong></th>
+<th><strong>安装命令</strong></th>
+<th><strong>功能</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/gitbook-plugin-accordion">accordion</a></td>
+<td>npm i  gitbook-plugin-accordion</td>
+<td>手风琴-折叠内容段落</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/gitbook-plugin-hide-element">hide-element</a>(插件没有效果)</td>
+<td>npm i  gitbook-plugin-hide-element</td>
+<td>隐藏类名</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/gitbook-plugin-code-fox">code</a></td>
+<td>npm i  gitbook-plugin-code-fox</td>
+<td>GitBook 的代码插件</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/gitbook-plugin-sharing">sharing</a></td>
+<td>npm i  gitbook-plugin-sharing</td>
+<td>共享按钮</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/gitbook-plugin-sharing-plus">sharing-plus</a></td>
+<td>npm i  gitbook-plugin-sharing-plus</td>
+<td>一个强大的 GitBook 搜索插件</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/gitbook-plugin-donate">donate</a></td>
+<td>npm i  gitbook-plugin-donate</td>
+<td>Gitbook 捐赠打赏插件</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/gitbook-plugin-anchor-navigation-ex">anchor-navigation-ex</a></td>
+<td>npm i  gitbook-plugin-anchor-navigation-ex</td>
+<td>锚点-导航插件</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/gitbook-plugin-expandable-chapters">expandable-chapters</a></td>
+<td>npm i  gitbook-plugin-expandable-chapters</td>
+<td>为每个章节添加一个图标</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/gitbook-plugin-sidebar-style">sidebar-style</a></td>
+<td>npm i  gitbook-plugin-sidebar-style</td>
+<td>侧边栏样式</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/gitbook-plugin-splitter">splitter</a></td>
+<td>npm i  gitbook-plugin-splitter</td>
+<td>该插件提供了一个垂直条来划分摘要和主要内容</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/gitbook-plugin-emphasize">emphasize</a></td>
+<td>npm i  gitbook-plugin-emphasize</td>
+<td>强调并突出显示内容的特定部分</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/gitbook-plugin-edit-link">edit-link</a></td>
+<td>npm i  gitbook-plugin-edit-link</td>
+<td>在每个页面上添加了“编辑此页面”链接</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/gitbook-plugin-github">github</a></td>
+<td>npm i  gitbook-plugin-github</td>
+<td>在右上角添加github图标</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/gitbook-plugin-lightbox">lightbox</a></td>
+<td>npm i  gitbook-plugin-lightbox</td>
+<td>点击图片弹窗显示</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/gitbook-plugin-youtube">youtube</a></td>
+<td>npm i  gitbook-plugin-youtube</td>
+<td>插入YouTube视频</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/gitbook-plugin-copyright">copyright</a></td>
+<td>npm i  gitbook-plugin-copyright</td>
+<td>版权保护插件</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/gitbook-plugin-tbfed-pagefooter">tbfed-pagefooter</a></td>
+<td>npm i  gitbook-plugin-tbfed-pagefooter</td>
+<td>版权信息插件</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/gitbook-plugin-pageview-count">pageview-count</a></td>
+<td>npm i  gitbook-plugin-pageview-count</td>
+<td>文档页面阅读数插件</td>
+</tr>
+</tbody></table>
+<h2 id="accordion"><a href="#accordion" class="headerlink" title="accordion"></a><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/gitbook-plugin-accordion"><strong>accordion</strong></a></h2><h3 id="Example"><a href="#Example" class="headerlink" title="Example"></a><strong>Example</strong></h3><p><a target="_blank" rel="noopener" href="https://artalar.github.io/gitbook-plugin-accordion/">https://artalar.github.io/gitbook-plugin-accordion/</a></p>
+<h3 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a><strong>Usage</strong></h3><p>​	In GitBook editor (or any else):</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> %accordion%Some title here%accordion%</span><br><span class="line"> Any content here</span><br><span class="line"> %/accordion%</span><br></pre></td></tr></table></figure>
+
+
+<blockquote>
+<p>that`s all! But each tag should be in one paragraph<br>similarly you can include accordion in accordion (like content)<br>IE11+ (flexboxes)<br>573 B minified, 282 B minified + gzipped</p>
+</blockquote>
+<h3 id="Install"><a href="#Install" class="headerlink" title="Install"></a><strong>Install</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Update `book.json`, like:</span><br><span class="line"> &#123;</span><br><span class="line">  &quot;gitbook&quot;: &quot;3.2.2&quot;,</span><br><span class="line">  &quot;title&quot;: &quot;Cool book&quot;,</span><br><span class="line">  &quot;plugins&quot;: \[&quot;accordion&quot;\]</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Then-run"><a href="#Then-run" class="headerlink" title="Then run"></a><strong>Then run</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> gibook install </span><br></pre></td></tr></table></figure>
+
+<p>​	That`s all, see <em>Usage</em></p>
+<h2 id="hide-element"><a href="#hide-element" class="headerlink" title="hide-element"></a><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/gitbook-plugin-hide-element"><strong>hide-element</strong></a></h2><p>插件没有效果</p>
+<p>隐藏您不想看到的元素。</p>
+<p>在<code>book.json</code>的plugins参数中添加插件名和配置信息：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;plugins&quot;: \[</span><br><span class="line">  &quot;hide-element&quot;</span><br><span class="line">  \],</span><br><span class="line">  &quot;pluginsConfig&quot;: &#123;</span><br><span class="line">  &quot;hide-element&quot;: &#123;</span><br><span class="line">  &quot;elements&quot;: \[&quot;.gitbook-link&quot;\]</span><br><span class="line">  &#125;</span><br><span class="line">  &#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
+<p>上面的配置信息中设置了隐藏的类名，所以<code>Published by GitBook</code> 、<code>本书使用 GitBook 发布</code> 就看不见了。</p>
+<h3 id="以下为可用方法："><a href="#以下为可用方法：" class="headerlink" title="以下为可用方法："></a><strong>以下为可用方法：</strong></h3><p>%accordion%<strong>隐藏删除 gitbook Published with GitBook 的方法</strong>%accordion%</p>
+<p><strong>说明</strong></p>
+<p>用GitBook生成的网页中，在左侧目录下方默认有一个Published with GitBook连接，可以将这个连接去掉，或者替换成其它连接。</p>
+<p><strong>方法</strong></p>
+<p>在gitbook站点目录创建_layouts-&gt;website-&gt;summary.html</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/works/../img/d61f63460412d30723c8e567bdc8f4c9.png" alt="隐藏删除 gitbook Published with GitBook 的方法"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/works/../img/e4361dc281c13b845dc393e0f4956434.png" alt="隐藏删除 gitbook Published with GitBook 的方法"></p>
+<p>在summary.html中填写下面内容:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">&#123;% macro articles(\_articles) %&#125;</span><br><span class="line">  &#123;% for article in \_articles %&#125;</span><br><span class="line">  &lt;li class=&quot;chapter &#123;% if article.path == file.path and not article.anchor %&#125;active&#123;% endif %&#125;&quot; data-level=&quot;&#123;&#123; article.level &#125;&#125;&quot; &#123;% if article.path %&#125;data-path=&quot;&#123;&#123; article.pathresolveFile &#125;&#125;&quot;&#123;% endif %&#125;&gt;</span><br><span class="line">  &#123;% if article.path and getPageByPath(article.path) %&#125;</span><br><span class="line">  &lt;a href=&quot;&#123;&#123; article.pathresolveFile &#125;&#125;&#123;&#123; article.anchor &#125;&#125;&quot;&gt;</span><br><span class="line">  &#123;% elif article.url %&#125;</span><br><span class="line">  &lt;a target=&quot;\_blank&quot; href=&quot;&#123;&#123; article.url &#125;&#125;&quot;&gt;</span><br><span class="line">  &#123;% else %&#125;</span><br><span class="line">  &lt;span&gt;</span><br><span class="line">  &#123;% endif %&#125;</span><br><span class="line">  &#123;% if article.level != &quot;0&quot; and config.pluginsConfig\[&#x27;theme-default&#x27;\].showLevel %&#125;</span><br><span class="line">  &lt;b&gt;&#123;&#123; article.level &#125;&#125;.&lt;/b&gt;</span><br><span class="line">  &#123;% endif %&#125;</span><br><span class="line">  &#123;&#123; article.title &#125;&#125;</span><br><span class="line">  &#123;% if article.path  or article.url %&#125;</span><br><span class="line">  &lt;/a&gt;</span><br><span class="line">  &#123;% else %&#125;</span><br><span class="line">  &lt;/span&gt;</span><br><span class="line">  &#123;% endif %&#125;</span><br><span class="line">  &#123;% if article.articles.length &gt; 0 %&#125;</span><br><span class="line">  &lt;ul class=&quot;articles&quot;&gt;</span><br><span class="line">  &#123;&#123; articles(article.articles, file, config) &#125;&#125;</span><br><span class="line">  &lt;/ul&gt;</span><br><span class="line">  &#123;% endif %&#125;</span><br><span class="line">  &lt;/li&gt;</span><br><span class="line">  &#123;% endfor %&#125;</span><br><span class="line"> &#123;% endmacro %&#125;</span><br><span class="line"> &lt;ul class=&quot;summary&quot;&gt;</span><br><span class="line">  &#123;% set \_divider = false %&#125;</span><br><span class="line">  &#123;% if config.links.sidebar  %&#125;</span><br><span class="line">  &#123;% for linkTitle, link in config.links.sidebar  %&#125;</span><br><span class="line">  &#123;% set \_divider = true %&#125;</span><br><span class="line">  &lt;li&gt;</span><br><span class="line">  &lt;a href=&quot;&#123;&#123; link &#125;&#125;&quot; target=&quot;\_blank&quot; class=&quot;custom-link&quot;&gt;&#123;&#123; linkTitle &#125;&#125;&lt;/a&gt;</span><br><span class="line">  &lt;/li&gt;</span><br><span class="line">  &#123;% endfor %&#125;</span><br><span class="line">  &#123;% endif %&#125;</span><br><span class="line">  &#123;% if \_divider %&#125;</span><br><span class="line">  &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;</span><br><span class="line">  &#123;% endif %&#125;</span><br><span class="line">  &#123;% for part in summary.parts %&#125;</span><br><span class="line">  &#123;% if part.title %&#125;</span><br><span class="line">  &lt;li class=&quot;header&quot;&gt;&#123;&#123; part.title &#125;&#125;&lt;/li&gt;</span><br><span class="line">  &#123;% elif not loop.first %&#125;</span><br><span class="line">  &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;</span><br><span class="line">  &#123;% endif %&#125;</span><br><span class="line">  &#123;&#123; articles(part.articles, file, config) &#125;&#125;</span><br><span class="line">  &#123;% endfor %&#125;</span><br><span class="line">  &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;</span><br><span class="line">  &lt;!--&lt;li&gt;--&gt;</span><br><span class="line">  &lt;!--&lt;a href=&quot;https://www.gitbook.com&quot; target=&quot;blank&quot; class=&quot;gitbook-link&quot;&gt;--&gt;</span><br><span class="line">  &lt;!--&#123;&#123; &quot;GITBOOK\_LINK&quot;t &#125;&#125;--&gt;</span><br><span class="line">  &lt;!--&lt;/a&gt;--&gt;</span><br><span class="line">  &lt;!--&lt;/li&gt;--&gt;</span><br><span class="line"> &lt;/ul&gt;</span><br></pre></td></tr></table></figure>
+
+<p>重启gitbook serve即可，下面是效果</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/works/../img/25ec23ed476cbbb702719e4f4a943cb3.png" alt="隐藏删除 gitbook Published with GitBook 的方法"></p>
+<p>%&#x2F;accordion%</p>
+<h2 id="code"><a href="#code" class="headerlink" title="code"></a><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/gitbook-plugin-code-fox">code</a></h2><p>GitBook 的代码插件</p>
+<p>代码块很酷，但还可以更酷。该插件添加了多行块的行号和复制按钮以轻松复制块的内容。</p>
+<p>太酷了，我可以看到它工作吗？</p>
+<p>下图显示了单行代码块：</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/davidmogar/gitbook-plugin-code/blob/resources/images/single.png?raw=true"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/works/../img/single.png" alt="单线"></a></p>
+<p>当显示多行代码时，会添加行号：</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/davidmogar/gitbook-plugin-code/blob/resources/images/multi.png?raw=true"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/works/../img/multi-171091408743112.png" alt="多线"></a></p>
+<h3 id="我该如何使用这个插件？"><a href="#我该如何使用这个插件？" class="headerlink" title="我该如何使用这个插件？"></a><strong>我该如何使用这个插件？</strong></h3><p>您只需编辑 book.json 并修改它，添加如下内容：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> &quot;plugins&quot; : \[ &quot;code&quot; \],</span><br></pre></td></tr></table></figure>
+
+<p>这将为您设置好一切。如果您想摆脱复制按钮，请也添加此部分：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> &quot;pluginsConfig&quot;: &#123;</span><br><span class="line">  &quot;code&quot;: &#123;</span><br><span class="line">  &quot;copyButtons&quot;: false</span><br><span class="line">  &#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="sharing"><a href="#sharing" class="headerlink" title="sharing"></a><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/gitbook-plugin-sharing">sharing</a></h2><p>该插件在 GitBook 网站工具栏中添加了共享按钮，用于在社交网络上共享书籍。</p>
+<h3 id="禁用此插件"><a href="#禁用此插件" class="headerlink" title="禁用此插件"></a><strong>禁用此插件</strong></h3><p>这是一个默认插件，可以使用配置禁用它<code>book.json</code>：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    plugins: \[&quot;-sharing&quot;\]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a><strong>配置</strong></h3><p>该插件可以在以下位置配置<code>book.json</code>：</p>
+<p>默认配置是：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;pluginsConfig&quot;: &#123;</span><br><span class="line">        &quot;sharing&quot;: &#123;</span><br><span class="line">            &quot;facebook&quot;: true,</span><br><span class="line">            &quot;twitter&quot;: true,</span><br><span class="line">            &quot;google&quot;: false,</span><br><span class="line">            &quot;weibo&quot;: false,</span><br><span class="line">            &quot;instapaper&quot;: false,</span><br><span class="line">            &quot;vk&quot;: false,</span><br><span class="line">            &quot;all&quot;: \[</span><br><span class="line">                &quot;facebook&quot;, &quot;google&quot;, &quot;twitter&quot;,</span><br><span class="line">                &quot;weibo&quot;, &quot;instapaper&quot;</span><br><span class="line">            \]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="sharing-plus"><a href="#sharing-plus" class="headerlink" title="sharing-plus"></a><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/gitbook-plugin-sharing-plus">sharing-plus</a></h2><p>一个强大的 GitBook 搜索插件。</p>
+<h3 id="特征"><a href="#特征" class="headerlink" title="特征"></a>特征</h3><p>* Search any character<br>* Search across element (for search code)<br>* Remember search url</p>
+<h3 id="使用这个插件"><a href="#使用这个插件" class="headerlink" title="使用这个插件"></a><strong>使用这个插件</strong></h3><p>在使用此插件之前，您应该先禁用默认的搜索插件，这是一个<code>book.json</code>配置示例：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    plugins: \[&quot;-lunr&quot;, &quot;-search&quot;, &quot;search-plus&quot;\]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<blockquote>
+<p>注意：仅 gitbook &gt;&#x3D; 3.0.0 支持</p>
+</blockquote>
+<h3 id="例子"><a href="#例子" class="headerlink" title="例子"></a><strong>例子</strong></h3><p><a target="_blank" rel="noopener" href="https://lwdgit.github.io/gitbook-plugin-search-plus/"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/works/../img/search.gif" alt="img"></a> <a target="_blank" rel="noopener" href="https://lwdgit.github.io/gitbook-plugin-search-plus/"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/works/../img/search2.gif" alt="img"></a> <a target="_blank" rel="noopener" href="https://lwdgit.github.io/gitbook-plugin-search-plus/book/?q=%E8%BF%99%E6%9C%AC%E5%B0%8F%E4%B9%A6%E7%9A%84%E7%9B%AE%E7%9A%84%E6%98%AF%E5%BC%95%E5%AF%BC%E4%BD%A0%E8%BF%9B%E5%85%A5%20React%20%E5%92%8C%20Webpack%20%E7%9A%84%E4%B8%96%E7%95%8C"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/works/../img/search3.gif" alt="img"></a></p>
+<p>打开<a target="_blank" rel="noopener" href="https://lwdgit.github.io/gitbook-plugin-search-plus/book/?q=%E8%BF%99%E6%9C%AC%E5%B0%8F%E4%B9%A6%E7%9A%84%E7%9B%AE%E7%9A%84%E6%98%AF%E5%BC%95%E5%AF%BC%E4%BD%A0%E8%BF%9B%E5%85%A5%20React%20%E5%92%8C%20Webpack%20%E7%9A%84%E4%B8%96%E7%95%8C">https://lwdgit.github.io/gitbook-plugin-search-plus/</a>或者自己测试一下</p>
+<pre><code>git clone git@github.com:lwdgit/gitbook-plugin-search-plus.git -b gh-pages
+cd gitbook-plugin-search-plus
+npm install
+npm start
+</code></pre>
+<p>然后打开<a target="_blank" rel="noopener" href="http://127.0.0.1:4000/">http://127.0.0.1:4000</a></p>
+<h2 id="donate"><a href="#donate" class="headerlink" title="donate"></a><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/gitbook-plugin-donate">donate</a></h2><p>Config:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;plugins&quot;: \[&quot;donate&quot;\],</span><br><span class="line">    &quot;pluginsConfig&quot;: &#123;</span><br><span class="line">        &quot;donate&quot;: &#123;</span><br><span class="line">          &quot;wechat&quot;: &quot;例：/images/qr.png&quot;,</span><br><span class="line">          &quot;alipay&quot;: &quot;http://blog.willin.wang/static/images/qr.png&quot;,</span><br><span class="line">          &quot;title&quot;: &quot;默认空&quot;,</span><br><span class="line">          &quot;button&quot;: &quot;默认值：Donate&quot;,</span><br><span class="line">          &quot;alipayText&quot;: &quot;默认值：支付宝捐赠&quot;,</span><br><span class="line">          &quot;wechatText&quot;: &quot;默认值：微信捐赠&quot;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>演示：<a target="_blank" rel="noopener" href="http://money.js.cool/">http://money.js.cool/</a></p>
+<p>如果喜欢，请打赏</p>
+<h2 id="anchor-navigation-ex"><a href="#anchor-navigation-ex" class="headerlink" title="anchor-navigation-ex"></a><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/gitbook-plugin-anchor-navigation-ex">anchor-navigation-ex</a></h2><p>❗ 插件配置不兼容V1. X版本如下</p>
+<p>😘 我的英文不好，这个文档是通过机器翻译的，如果你不明白，请阅读中文文档，翻译本身</p>
+<h3 id="插件功能"><a href="#插件功能" class="headerlink" title="插件功能"></a><strong>插件功能</strong></h3><ul>
+<li><p>H1-H6给页面标题增加锚点效果</p>
+</li>
+<li><p>浮动导航模式</p>
+</li>
+<li><p>页面顶部导航模式</p>
+</li>
+<li><p>图标层次显示前的导航标题，H1、H3级别图标的自定义</p>
+</li>
+<li><p>plugins[“theme-default”],页面标题级别与默认主题官方<code>showLevel</code>层次结构关联</p>
+</li>
+<li><p>plugins[“theme-default”],插件风格网站默认主题三种风格：White、Sepia、Night</p>
+</li>
+<li><p><code>&lt;extoc&gt;&lt;/extoc&gt;</code>向页面添加标签会在此处生成 TOC 目录</p>
+</li>
+<li><p>将标签添加<code>&lt;! - ex_nonav -&gt;</code>到页面，而不在该页面上生成浮动导航</p>
+</li>
+<li><p>config.printLog&#x3D;true，打印过程当前进度，调试很有用</p>
+</li>
+<li><p>config.multipleH1&#x3D;false，去掉丑陋的冗余1.序列号（比如你的书后面跟随一个只有一个H1标签的MD文件）</p>
+</li>
+<li><p>config.showGoTop&#x3D;true,显示返回顶部按钮 V1.0.11+</p>
+</li>
+<li><p>config.float.floatIcon ，可以配置浮动导航浮动图标样式 V1.0.12+</p>
+</li>
+<li><p><code>&lt;!-- ex_nolevel --&gt;</code>页面 添加标签，该页面不生成分层编号 V1.0.12+</p>
+</li>
+</ul>
+<h3 id="插件效果"><a href="#插件效果" class="headerlink" title="插件效果"></a><strong>插件效果</strong></h3><ul>
+<li><p>风格：简约</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://github.com/zq99299/gitbook-plugin-anchor-navigation-ex/blob/master/doc/effectScreenshot.md">点击查看效果图</a></p>
+</li>
+</ul>
+<h3 id="如何使用插件？"><a href="#如何使用插件？" class="headerlink" title="如何使用插件？"></a><strong>如何使用插件？</strong></h3><p>在您的<code>book. Json</code>添加插件中：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;plugins&quot;: \[</span><br><span class="line">       &quot;anchor-navigation-ex&quot;</span><br><span class="line">  \]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>然后安装插件：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gitbook install ./</span><br></pre></td></tr></table></figure>
+
+<p>可以使用的插件详细配置<a target="_blank" rel="noopener" href="https://github.com/zq99299/gitbook-plugin-anchor-navigation-ex/blob/master/doc/config-en.md">请点击这里查看</a></p>
+<p>或者安装单独的插件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install gitbook-plugin-anchor-navigation-ex --save</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>打开 npm ：<a target="_blank" rel="noopener" href="https://www.npmjs.com/package/gitbook-plugin-anchor-navigation-ex">https://www.npmjs.com/package/gitbook-plugin-anchor-navigation-ex</a></p>
+</blockquote>
+<p>这设置了以下插件功能，并重写。</p>
+<ol>
+<li><p><a target="_blank" rel="noopener" href="https://github.com/zhangzq/gitbook-plugin-navigator">https://github.com/zhangzq/gitbook-plugin-navigator</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://github.com/yaneryou/gitbook-plugin-anchor-navigation">https://github.com/yaneryou/gitbook-plugin-anchor-navigation</a></p>
+</li>
+</ol>
+<h2 id="expandable-chapters"><a href="#expandable-chapters" class="headerlink" title="expandable-chapters"></a><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/gitbook-plugin-expandable-chapters">expandable-chapters</a></h2><p>该插件为每个章节添加一个图标，该图标有一个子级和用于子级列表折叠&#x2F;展开的 css 状态。</p>
+<h3 id="如何使用它？"><a href="#如何使用它？" class="headerlink" title="如何使用它？"></a><strong>如何使用它？</strong></h3><p>将其添加到您的<code>book.json</code>配置中：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    plugins: \[&quot;collapsible-chapters&quot;\]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>使用以下命令安装插件：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gitbook install</span><br></pre></td></tr></table></figure>
+
+<h3 id="配置-1"><a href="#配置-1" class="headerlink" title="配置"></a><strong>配置</strong></h3><p>暂时不需要配置，可以留空。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">&quot;pluginsConfig&quot;: &#123;</span><br><span class="line">&quot;collapsible-chapters&quot;:&#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="也可以看看"><a href="#也可以看看" class="headerlink" title="也可以看看"></a><strong>也可以看看</strong></h3><p>也许您会发现<a target="_blank" rel="noopener" href="https://github.com/poojan/gitbook-plugin-toggle-chapters">https://github.com/poojan/gitbook-plugin-toggle-chapters</a>也很有用？</p>
+<h2 id="sidebar-style"><a href="#sidebar-style" class="headerlink" title="sidebar-style"></a><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/gitbook-plugin-sidebar-style">sidebar-style</a></h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Config:</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">    &quot;plugins&quot;: \[&quot;sidebar-style&quot;\],</span><br><span class="line">    &quot;pluginsConfig&quot;: &#123;</span><br><span class="line">        &quot;sidebar-style&quot;: &#123;</span><br><span class="line">          &quot;title&quot;: &quot;书题&quot;,</span><br><span class="line">          &quot;author&quot;: &quot;作者&quot;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果 author 字段设置为空字符串，将不会显示作者信息</p>
+<h2 id="splitter"><a href="#splitter" class="headerlink" title="splitter"></a><strong><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/gitbook-plugin-splitter">splitter</a></strong></h2><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/works/../img/gitbook-splitter-demo.gif" alt="分离器"></p>
+<p>该插件提供了一个垂直条来划分摘要和主要内容。</p>
+<p><a target="_blank" rel="noopener" href="https://nodei.co/npm/gitbook-plugin-splitter/"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/works/../img/gitbook-plugin-splitter.png" alt="国家公共管理"></a></p>
+<h3 id="其他功能"><a href="#其他功能" class="headerlink" title="其他功能"></a><strong>其他功能</strong></h3><ul>
+<li>它将把分离器的位置信息保存到sessionStorage中。</li>
+</ul>
+<h3 id="如何使用它？-1"><a href="#如何使用它？-1" class="headerlink" title="如何使用它？"></a><strong>如何使用它？</strong></h3><p>将其添加到您的<code>book.json</code>配置中：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    “插件” ：\[ “分割器” \] </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>使用以下命令安装插件：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gitbook init</span><br></pre></td></tr></table></figure>
+
+<h3 id="变更日志"><a href="#变更日志" class="headerlink" title="变更日志"></a><strong>变更日志</strong></h3><p><strong>版本 0.0.6 (2016-12-06T16:54:38)</strong></p>
+<ul>
+<li><p>修复：修复当屏幕尺寸的宽度为 600px 或更小时不执行任何操作 (#6)</p>
+</li>
+<li><p>修复：将栏位置从“localStorage”更改为“sessiongStorage”（#10）</p>
+</li>
+</ul>
+<p><strong>版本 0.0.6 (2015-11-06T16:54:38)</strong></p>
+<ul>
+<li>支持的 Gitbook v3</li>
+</ul>
+<p><strong>版本 0.0.5 (2015-11-06T16:54:38)</strong></p>
+<ul>
+<li>修复了 Gitbook V2.5.x 中摘要视图显示的切换按钮不起作用的问题</li>
+</ul>
+<p>该软件根据 MIT 许可证发布，请参阅 LICENSE.txt。</p>
+<h2 id="emphasize"><a href="#emphasize" class="headerlink" title="emphasize"></a><strong><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/gitbook-plugin-emphasize">emphasize</a></strong></h2><p><strong>强调 GitBook 中的文本</strong></p>
+<p>强调并突出显示内容的特定部分</p>
+<p><strong>如何使用它？</strong></p>
+<p>在您的中配置插件<code>book.json</code>：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    “插件”：\[ “强调” \] </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>然后在您的 markdown&#x2F;asciidoc 内容中，使用以下命令突出显示一些文本：</p>
+<blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">此文本已&#123;% em %&#125;突出显示！&#123;% endem %&#125;</span><br><span class="line">此文本&#123;% em %&#125;用 \*\*markdown\*\* 突出显示！&#123;% endem %&#125;</span><br><span class="line">此文本&#123;% em type=&quot;green&quot; %&#125;以绿色突出显示！&#123;% endem %&#125;</span><br><span class="line">此文本&#123;% em type=&quot;red&quot; %&#125;以红色突出显示！&#123;% endem %&#125;</span><br><span class="line">此文本&#123;% em color=&quot;#ff0000&quot; %&#125;使用自定义颜色突出显示！&#123;% endem %&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h2 id="edit-link"><a href="#edit-link" class="headerlink" title="edit-link"></a><strong><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/gitbook-plugin-edit-link">edit-link</a></strong></h2><p>这个 GitBook 插件在每个页面上添加了“编辑此页面”链接。</p>
+<p>链接目标将是 Github 或 Gitlab 或任何存储库上该页面的源文件。</p>
+<h3 id="截屏"><a href="#截屏" class="headerlink" title="截屏"></a><strong>截屏</strong></h3><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/works/../img/f5b79002-99b8-11e4-821a-d2af6c729348-171092752636428.png" alt="gitbook-插件-编辑-链接"></p>
+<h3 id="用法"><a href="#用法" class="headerlink" title="用法"></a><strong>用法</strong></h3><h4 id="步骤1-更新book-json文件"><a href="#步骤1-更新book-json文件" class="headerlink" title="步骤1 - 更新book.json文件"></a><strong>步骤1 - 更新<code>book.json</code>文件</strong></h4><p>在你的 gitbook<code>book.json</code>文件中，添加<code>edit-link</code>到<code>plugins</code>列表中。</p>
+<p>在 中<code>pluginsConfig</code>，设置<code>base</code>值，该值是 github 或 gitlab 或其他代码存储库的基本路径。尾部斜杠不是必需的。</p>
+<p>默认情况下，链接标签为“编辑此页面”。您可以使用插件配置更改它<code>label</code>。</p>
+<p><strong><code>book.json</code>gitbook 2.0.1 及以上版本的示例文件</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;gitbook&quot;: &quot;2.0.1&quot;,</span><br><span class="line">    &quot;plugins&quot;: \[&quot;edit-link&quot;\],</span><br><span class="line">    &quot;pluginsConfig&quot;: &#123;</span><br><span class="line">            &quot;edit-link&quot;: &#123;</span><br><span class="line">                &quot;base&quot;: &quot;https://github.com/USER/REPO/edit/BRANCH/path/to/book&quot;,</span><br><span class="line">                &quot;label&quot;: &quot;Edit This Page&quot;</span><br><span class="line">            &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="book-jsongitbook-版本-2-0-1-和多语言标签的示例文件"><a href="#book-jsongitbook-版本-2-0-1-和多语言标签的示例文件" class="headerlink" title="book.jsongitbook 版本 2.0.1+ 和多语言标签的示例文件"></a><strong><code>book.json</code>gitbook 版本 2.0.1+ 和多语言标签的示例文件</strong></h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;gitbook&quot;: &quot;2.0.1&quot;,</span><br><span class="line">    &quot;plugins&quot;: \[&quot;edit-link&quot;\],</span><br><span class="line">    &quot;pluginsConfig&quot;: &#123;</span><br><span class="line">            &quot;edit-link&quot;: &#123;</span><br><span class="line">                &quot;base&quot;: &quot;https://github.com/USER/REPO/edit/BRANCH/path/to/book&quot;,</span><br><span class="line">                &quot;label&quot;: &#123;</span><br><span class="line">                    &quot;en&quot;: &quot;Edit This Page&quot;,</span><br><span class="line">                    &quot;de&quot;: &quot;Seite bearbeiten&quot;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="book-json旧版-gitbook-版本"><a href="#book-json旧版-gitbook-版本" class="headerlink" title="book.json旧版 gitbook 版本 &lt;&#x3D; 1.5.0 的示例文件"></a><strong><code>book.json</code>旧版 gitbook 版本 &lt;&#x3D; 1.5.0 的示例文件</strong></h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;gitbook&quot;: &quot;1.5.0&quot;,</span><br><span class="line">    &quot;plugins&quot;: \[&quot;edit-link@1.1.0&quot;\],</span><br><span class="line">    &quot;pluginsConfig&quot;: &#123;</span><br><span class="line">            &quot;edit-link&quot;: &#123;</span><br><span class="line">                &quot;base&quot;: &quot;https://github.com/USER/REPO/edit/BRANCH/path/to/book&quot;,</span><br><span class="line">                &quot;label&quot;: &quot;Edit This Page&quot;</span><br><span class="line">            &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>注意</strong><code>book.json</code>：如果您的书还没有，上面的代码片段可以用作完整文件。</p>
+<blockquote>
+<p><strong>Github&#x2F;Gitlab</strong>：在 string 中，如果您希望源文件以读取模式打开，而不是直接在 github&#x2F;gitlab 上以编辑模式打开，则<code>...REPO/edit/BRANCH...</code>可以替换<code>edit</code>为。<code>tree</code></p>
+</blockquote>
+<h4 id="步骤-2-gitbook-命令"><a href="#步骤-2-gitbook-命令" class="headerlink" title="步骤#2 - gitbook 命令"></a><strong>步骤#2 - gitbook 命令</strong></h4><p>跑步<code>gitbook install</code>。它会自动为你的书安装<code>edit-link</code>gitbook 插件。这只需要一次。</p>
+<p>照常制作您的书 ( <code>gitbook build</code>) 或服务 ( )。<code>gitbook serve</code></p>
+<h3 id="故障排除"><a href="#故障排除" class="headerlink" title="故障排除"></a><strong>故障排除</strong></h3><ol>
+<li><p>如果您没有看到“编辑此页面”链接，请检查您的链接是否<code>book.json</code>有效。您可以使用这个在线工具 - <a target="_blank" rel="noopener" href="http://json.parser.online.fr/beta/">http://json.parser.online.fr/beta/</a></p>
+</li>
+<li><p>检查您是否使用默认的 gitbook 主题。不建议直接修改gitbook主题。</p>
+</li>
+</ol>
+<h3 id="已知问题"><a href="#已知问题" class="headerlink" title="已知问题"></a><strong>已知问题</strong></h3><p>Gitbook 2.0.1 删除了<code>page:after</code>该插件所需的钩子。这里报告了一个问题 - <a target="_blank" rel="noopener" href="https://github.com/GitbookIO/gitbook/issues/724">https://github.com/GitbookIO/gitbook/issues/724</a>但同时该插件正在使用此拉取请求添加的解决方法 - <a target="_blank" rel="noopener" href="https://github.com/rtCamp/gitbook-plugin-edit-link/pull/4">https://github.com/rtCamp/gitbook-plugin-edit -链接/拉/4</a></p>
+<p>因此，当使用 Gitbook 2.0.1 时，您可能会在运行构建时在控制台中看到以下警告：</p>
+<blockquote>
+<p>警告：插件“gitbook-plugin-edit-link”使用的挂钩“page”已弃用，并将在未来版本中删除</p>
+</blockquote>
+<p>您现在可以安全地忽略上述警告。</p>
+<h3 id="这是如何运作的？"><a href="#这是如何运作的？" class="headerlink" title="这是如何运作的？"></a><strong>这是如何运作的？</strong></h3><p>该插件只是在解析的页面内容中查找 HTML 注释<code>&lt;!-- Actions Right --&gt;</code>，并在 之前插入“编辑链接”HTML <code>&lt;!-- Actions Right --&gt;</code>。</p>
+<p>这意味着如果 HTML 注释发生变化，这个插件就会崩溃，但我希望在发生这种情况时能够轻松修复它。</p>
+<h2 id="github"><a href="#github" class="headerlink" title="github"></a><strong><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/gitbook-plugin-github">github</a></strong></h2><p><code>github</code> 插件会在右上角添加一个 github 的图标，可以通过插件属性配置链接，点击后可以进入自定义的链接页面。</p>
+<p><strong>配置使用方法：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;plugins&quot;: \[ </span><br><span class="line">        &quot;github&quot; </span><br><span class="line">    \],</span><br><span class="line">    &quot;pluginsConfig&quot;: &#123;</span><br><span class="line">        &quot;github&quot;: &#123;</span><br><span class="line">            &quot;url&quot;: &quot;https://github.com/jiangminggithub&quot;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>插件 Github 地址：<a target="_blank" rel="noopener" href="https://github.com/GitbookIO/plugin-github">https://github.com/GitbookIO/plugin-github</a></p>
+<h2 id="lightbox"><a href="#lightbox" class="headerlink" title="lightbox"></a><strong><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/gitbook-plugin-lightbox">lightbox</a></strong></h2><p>这个插件可以单击图片，以图片<code>本身大小的方式弹窗显示</code>图片和一些图片相关的 <code>Alt</code> 的信息。</p>
+<p><strong>配置使用方法：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;plugins&quot;: \[</span><br><span class="line">        &quot;lightbox&quot;</span><br><span class="line">    \],</span><br><span class="line">    &quot;lightbox&quot;: &#123;</span><br><span class="line">        &quot;includeJQuery&quot;: false,</span><br><span class="line">        &quot;sameUuid&quot;: true,</span><br><span class="line">        &quot;options&quot;: &#123;</span><br><span class="line">            &quot;resizeDuration&quot;: 500,</span><br><span class="line">            &quot;wrapAround&quot;: false</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>配置参数介绍：</p>
+<ul>
+<li><p><code>includeJQuery</code>: 如果你的项目中已经引入了 <code>JQuery</code> 可以在此设置是否包含插件本身的 JQuery。</p>
+</li>
+<li><p><code>sameUuid</code>：在图片预览中添加上一个、下一个按钮来浏览本页面的图片配置。</p>
+</li>
+<li><p><code>options</code>： 这个选项配置显示的动画时长，是否包裹等相关配置。</p>
+</li>
+</ul>
+<h2 id="youtube"><a href="#youtube" class="headerlink" title="youtube"></a><strong><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/gitbook-plugin-youtube">youtube</a></strong></h2><p><strong>如何使用它？</strong></p>
+<p>将以下内容添加到您的<code>book.json</code>文件中，然后运行<code>gitbook install</code>：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    “插件” ：\[ “ youtube ” \] </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>您现在可以使用此标签将 YouTube 视频添加到您的图书中：</p>
+<p>看看这个视频：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% youtube  %&#125;</span><br><span class="line">https://www.youtube.com/watch?v=hI6yCMjGoJs </span><br><span class="line">&#123;% endyoutube %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>该视频将被网站中的嵌入 iframe 以及电子书版本中的链接所取代。</p>
+<h2 id="copyright"><a href="#copyright" class="headerlink" title="copyright"></a><strong><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/gitbook-plugin-copyright">copyright</a></strong></h2><blockquote>
+<p><code>gitbook-plugin-copyright</code> 是基于Gitbook实现的<strong>版权保护插件</strong>,用于复制内容时<strong>追加版权信息</strong>以及文章末尾<strong>添加版权小尾巴</strong>.</p>
+</blockquote>
+<h3 id="🏠-主页"><a href="#🏠-主页" class="headerlink" title="🏠 主页"></a><strong>🏠 <a target="_blank" rel="noopener" href="https://github.com/snowdreams1006/gitbook-plugin-copyright#readme">主页</a></strong></h3><ul>
+<li><p>Github : <a target="_blank" rel="noopener" href="https://snowdreams1006.github.io/gitbook-plugin-copyright/">https://snowdreams1006.github.io/gitbook-plugin-copyright/</a></p>
+</li>
+<li><p>Gitee : <a target="_blank" rel="noopener" href="https://snowdreams1006.gitee.io/gitbook-plugin-copyright/">https://snowdreams1006.gitee.io/gitbook-plugin-copyright/</a></p>
+</li>
+<li><p>Gitlab : <a target="_blank" rel="noopener" href="https://snowdreams1006.gitlab.io/gitbook-plugin-copyright/">https://snowdreams1006.gitlab.io/gitbook-plugin-copyright/</a></p>
+</li>
+</ul>
+<h3 id="效果"><a href="#效果" class="headerlink" title="效果"></a><strong>效果</strong></h3><p><a target="_blank" rel="noopener" href="https://github.com/snowdreams1006/gitbook-plugin-copyright/blob/master/docs/copyright-use-preview.png"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/works/../img/copyright-use-preview-171092753803630.png" alt="copyright-use-preview.png"></a></p>
+<h3 id="特色"><a href="#特色" class="headerlink" title="特色"></a><strong>特色</strong></h3><ul>
+<li><p>支持复制内容<strong>自动追加</strong>版本保护信息</p>
+</li>
+<li><p>支持文章末尾<strong>自动生成</strong>版本保护尾巴</p>
+</li>
+<li><p>支持自定义小尾巴<strong>版权保护图片</strong></p>
+</li>
+<li><p>支持 <code>Gitbook</code> <strong>多语言环境</strong></p>
+</li>
+</ul>
+<h3 id="✨-示例"><a href="#✨-示例" class="headerlink" title="✨ 示例"></a><strong>✨ 示例</strong></h3><p>不仅 <a target="_blank" rel="noopener" href="https://github.com/snowdreams1006/gitbook-plugin-copyright">gitbook-plugin-copyright</a> <strong>官方文档</strong>已整合 <code>copyright</code> 版权保护插件,此外还提供了示例项目,详情参考 <code>example</code> 目录.</p>
+<ul>
+<li><p><a target="_blank" rel="noopener" href="https://github.com/snowdreams1006/gitbook-plugin-copyright/tree/master/docs">官方文档</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://github.com/snowdreams1006/gitbook-plugin-copyright/tree/master/example">官方示例</a></p>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;plugins&quot;: \[&quot;copyright&quot;\],</span><br><span class="line">    &quot;pluginsConfig&quot;: &#123;</span><br><span class="line">        &quot;copyright&quot;: &#123;</span><br><span class="line">            &quot;site&quot;: &quot;https://snowdreams1006.github.io/gitbook-plugin-copyright&quot;,</span><br><span class="line">            &quot;author&quot;: &quot;雪之梦技术驿站&quot;,</span><br><span class="line">            &quot;website&quot;: &quot;雪之梦技术驿站&quot;,</span><br><span class="line">            &quot;image&quot;: &quot;https://snowdreams1006.github.io/snowdreams1006-wechat-open.png&quot;,</span><br><span class="line">            &quot;copyProtect&quot;: false</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="🚀-用法"><a href="#🚀-用法" class="headerlink" title="🚀 用法"></a><strong>🚀 用法</strong></h3><h4 id="Step-1-更新-book-json-配置文件"><a href="#Step-1-更新-book-json-配置文件" class="headerlink" title="Step #1 - 更新 book.json 配置文件"></a><strong>Step #1 - 更新 <code>book.json</code> 配置文件</strong></h4><ol>
+<li><p>在 <code>book.json</code> 配置文件中,添加 <code>copyright</code> 到 <code>plugins</code> 列表.</p>
+</li>
+<li><p>在 <code>book.json</code> 配置文件中,配置 <code>pluginsConfig</code> 对象.</p>
+</li>
+</ol>
+<p>单语言版简单示例 <code>book.json</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;plugins&quot;: \[&quot;copyright&quot;\],</span><br><span class="line">    &quot;pluginsConfig&quot;: &#123;</span><br><span class="line">        &quot;copyright&quot;: &#123;</span><br><span class="line">            &quot;site&quot;: &quot;https://snowdreams1006.github.io/gitbook-plugin-copyright&quot;,</span><br><span class="line">            &quot;author&quot;: &quot;雪之梦技术驿站&quot;,</span><br><span class="line">            &quot;website&quot;: &quot;雪之梦技术驿站&quot;,</span><br><span class="line">            &quot;image&quot;: &quot;https://snowdreams1006.github.io/snowdreams1006-wechat-open.png&quot;,</span><br><span class="line">            &quot;copyProtect&quot;: false</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>多语言版简单示例 <code>book.json</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;plugins&quot;: \[&quot;copyright&quot;\],</span><br><span class="line">    &quot;pluginsConfig&quot;: &#123;</span><br><span class="line">        &quot;copyright&quot;: &#123;</span><br><span class="line">            &quot;site&quot;: &quot;https://snowdreams1006.github.io/gitbook-plugin-copyright&quot;,</span><br><span class="line">            &quot;author&quot;: &#123;</span><br><span class="line">                &quot;en&quot;: &quot;snowdreams1006&quot;,</span><br><span class="line">                &quot;zh&quot;: &quot;雪之梦技术驿站&quot;</span><br><span class="line">            &#125;,</span><br><span class="line">            &quot;website&quot;: &#123;</span><br><span class="line">                &quot;en&quot;: &quot;snowdreams1006&#x27;s Gitbook&quot;,</span><br><span class="line">                &quot;zh&quot;: &quot;雪之梦技术驿站&quot;</span><br><span class="line">            &#125;,</span><br><span class="line">            &quot;image&quot;: &#123;</span><br><span class="line">                &quot;en&quot;: &quot;https://img.shields.io/badge/github-snowdreams1006-brightgreen.svg&quot;,</span><br><span class="line">                &quot;zh&quot;: &quot;https://snowdreams1006.github.io/snowdreams1006-wechat-open.png&quot;</span><br><span class="line">            &#125;,</span><br><span class="line">            &quot;copyProtect&quot;: false</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>其中,配置参数含义如下:</p>
+<ul>
+<li><p><code>site</code> : [必选]部署网站基本路径</p>
+</li>
+<li><p><code>author</code> : [必选]作者信息</p>
+</li>
+<li><p><code>website</code> : [必选]网站名称</p>
+</li>
+<li><p><code>image</code> : [可选]版权保护图片</p>
+</li>
+<li><p><code>copyProtect</code> : [可选]复制内容是否追加版权保护信息</p>
+</li>
+</ul>
+<h4 id="Step-2-运行-gitbook-相关命令"><a href="#Step-2-运行-gitbook-相关命令" class="headerlink" title="Step #2 - 运行 gitbook 相关命令"></a><strong>Step #2 - 运行 gitbook 相关命令</strong></h4><ul>
+<li>运行 <code>gitbook install</code> 命令安装到本地项目</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gitbook install</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>运行 <code>gitbook build</code> 命令构建本地项目或者 <code>gitbook serve</code> 启动本地服务.</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gitbook build</span><br></pre></td></tr></table></figure>
+
+<p>或者</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gitbook serve</span><br></pre></td></tr></table></figure>
+
+<h2 id="tbfed-pagefooter"><a href="#tbfed-pagefooter" class="headerlink" title="tbfed-pagefooter"></a><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/gitbook-plugin-tbfed-pagefooter">tbfed-pagefooter</a></h2><ul>
+<li>插件配置</li>
+</ul>
+<blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"> &quot;tbfed-pagefooter&quot;: &#123;</span><br><span class="line">  &quot;copyright&quot;:&quot;&amp;copy Taobao FED Team&quot;,</span><br><span class="line">  &quot;modify\_label&quot;: &quot;该文件修订时间：&quot;,</span><br><span class="line">  &quot;modify\_format&quot;: &quot;YYYY-MM-DD HH:mm:ss&quot;</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line">&gt; </span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>copyright 和 modify_label 支持 html 代码</p>
+<h2 id="pageview-count"><a href="#pageview-count" class="headerlink" title="pageview-count"></a><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/gitbook-plugin-pageview-count">pageview-count</a></h2><p>文档页面阅读数插件</p>
+<p>Installation</p>
+<p>In your book.json add the plugin:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> &#123;</span><br><span class="line">  &quot;plugins&quot;: \[</span><br><span class="line">  &quot;pageview-count&quot;</span><br><span class="line">  \]</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="red signal">Red Signals</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://red-signals.github.io/Works/2024/03/18/gitbook%E6%8F%92%E4%BB%B6/">https://red-signals.github.io/Works/2024/03/18/gitbook插件/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://red-signals.github.io/Works" target="_blank">Works</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/works/img/works%E4%B8%BB%E5%9B%BE.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>赞助</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/works/img/%E5%BE%AE%E4%BF%A1.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/works/img/%E5%BE%AE%E4%BF%A1.jpg" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/works/img/%E6%94%AF%E4%BB%98%E5%AE%9D.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/works/img/%E6%94%AF%E4%BB%98%E5%AE%9D.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/works/2024/03/18/Gitbook%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/" title="Gitbook安装与配置"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/works/img/works%E4%B8%BB%E5%9B%BE.jpg" onerror="onerror=null;src='/works/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Gitbook安装与配置</div></div></a></div><div class="next-post pull-right"><a href="/works/2024/03/23/%E6%90%AC%E7%93%A6%E5%B7%A5%E7%9B%B8%E5%85%B3%E7%BD%91%E7%AB%99/" title="搬瓦工相关网站"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/works/../works/img/cover/wagognlogo.jpg" onerror="onerror=null;src='/works/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">搬瓦工相关网站</div></div></a></div></nav><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div class="comment-switch"><span class="first-comment">Waline</span><span id="switch-btn"></span><span class="second-comment">Utterances</span></div></div><div class="comment-wrap"><div><div id="waline-wrap"></div></div><div><div id="utterances-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/works/img/works%E5%A4%B4%E5%83%8F.png" onerror="this.onerror=null;this.src='/works/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Red Signals</div><div class="author-info__description">胜人者有力，自胜者强</div></div><div class="card-info-data site-data is-center"><a href="/works/archives/"><div class="headline">文章</div><div class="length-num">61</div></a><a href="/works/tags/"><div class="headline">标签</div><div class="length-num">24</div></a><a href="/works/categories/"><div class="headline">分类</div><div class="length-num">24</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/red-signals"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/red-signals" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="/works/aimeikeji135@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">知人者智，自知者明</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E6%8F%92%E4%BB%B6"><span class="toc-number">1.</span> <span class="toc-text">常用插件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#accordion"><span class="toc-number">2.</span> <span class="toc-text">accordion</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Example"><span class="toc-number">2.1.</span> <span class="toc-text">Example</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Usage"><span class="toc-number">2.2.</span> <span class="toc-text">Usage</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Install"><span class="toc-number">2.3.</span> <span class="toc-text">Install</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Then-run"><span class="toc-number">2.4.</span> <span class="toc-text">Then run</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hide-element"><span class="toc-number">3.</span> <span class="toc-text">hide-element</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A5%E4%B8%8B%E4%B8%BA%E5%8F%AF%E7%94%A8%E6%96%B9%E6%B3%95%EF%BC%9A"><span class="toc-number">3.1.</span> <span class="toc-text">以下为可用方法：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#code"><span class="toc-number">4.</span> <span class="toc-text">code</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%88%91%E8%AF%A5%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E8%BF%99%E4%B8%AA%E6%8F%92%E4%BB%B6%EF%BC%9F"><span class="toc-number">4.1.</span> <span class="toc-text">我该如何使用这个插件？</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#sharing"><span class="toc-number">5.</span> <span class="toc-text">sharing</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A6%81%E7%94%A8%E6%AD%A4%E6%8F%92%E4%BB%B6"><span class="toc-number">5.1.</span> <span class="toc-text">禁用此插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE"><span class="toc-number">5.2.</span> <span class="toc-text">配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#sharing-plus"><span class="toc-number">6.</span> <span class="toc-text">sharing-plus</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%B9%E5%BE%81"><span class="toc-number">6.1.</span> <span class="toc-text">特征</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E8%BF%99%E4%B8%AA%E6%8F%92%E4%BB%B6"><span class="toc-number">6.2.</span> <span class="toc-text">使用这个插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BE%8B%E5%AD%90"><span class="toc-number">6.3.</span> <span class="toc-text">例子</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#donate"><span class="toc-number">7.</span> <span class="toc-text">donate</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#anchor-navigation-ex"><span class="toc-number">8.</span> <span class="toc-text">anchor-navigation-ex</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8F%92%E4%BB%B6%E5%8A%9F%E8%83%BD"><span class="toc-number">8.1.</span> <span class="toc-text">插件功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8F%92%E4%BB%B6%E6%95%88%E6%9E%9C"><span class="toc-number">8.2.</span> <span class="toc-text">插件效果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E6%8F%92%E4%BB%B6%EF%BC%9F"><span class="toc-number">8.3.</span> <span class="toc-text">如何使用插件？</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#expandable-chapters"><span class="toc-number">9.</span> <span class="toc-text">expandable-chapters</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E5%AE%83%EF%BC%9F"><span class="toc-number">9.1.</span> <span class="toc-text">如何使用它？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE-1"><span class="toc-number">9.2.</span> <span class="toc-text">配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B9%9F%E5%8F%AF%E4%BB%A5%E7%9C%8B%E7%9C%8B"><span class="toc-number">9.3.</span> <span class="toc-text">也可以看看</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#sidebar-style"><span class="toc-number">10.</span> <span class="toc-text">sidebar-style</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#splitter"><span class="toc-number">11.</span> <span class="toc-text">splitter</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E5%8A%9F%E8%83%BD"><span class="toc-number">11.1.</span> <span class="toc-text">其他功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E5%AE%83%EF%BC%9F-1"><span class="toc-number">11.2.</span> <span class="toc-text">如何使用它？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E6%9B%B4%E6%97%A5%E5%BF%97"><span class="toc-number">11.3.</span> <span class="toc-text">变更日志</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#emphasize"><span class="toc-number">12.</span> <span class="toc-text">emphasize</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#edit-link"><span class="toc-number">13.</span> <span class="toc-text">edit-link</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%88%AA%E5%B1%8F"><span class="toc-number">13.1.</span> <span class="toc-text">截屏</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%A8%E6%B3%95"><span class="toc-number">13.2.</span> <span class="toc-text">用法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%AD%A5%E9%AA%A41-%E6%9B%B4%E6%96%B0book-json%E6%96%87%E4%BB%B6"><span class="toc-number">13.2.1.</span> <span class="toc-text">步骤1 - 更新book.json文件</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#book-jsongitbook-%E7%89%88%E6%9C%AC-2-0-1-%E5%92%8C%E5%A4%9A%E8%AF%AD%E8%A8%80%E6%A0%87%E7%AD%BE%E7%9A%84%E7%A4%BA%E4%BE%8B%E6%96%87%E4%BB%B6"><span class="toc-number">13.2.1.1.</span> <span class="toc-text">book.jsongitbook 版本 2.0.1+ 和多语言标签的示例文件</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#book-json%E6%97%A7%E7%89%88-gitbook-%E7%89%88%E6%9C%AC"><span class="toc-number">13.2.1.2.</span> <span class="toc-text">book.json旧版 gitbook 版本 &lt;&#x3D; 1.5.0 的示例文件</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%AD%A5%E9%AA%A4-2-gitbook-%E5%91%BD%E4%BB%A4"><span class="toc-number">13.2.2.</span> <span class="toc-text">步骤#2 - gitbook 命令</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%85%E9%9A%9C%E6%8E%92%E9%99%A4"><span class="toc-number">13.3.</span> <span class="toc-text">故障排除</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%B2%E7%9F%A5%E9%97%AE%E9%A2%98"><span class="toc-number">13.4.</span> <span class="toc-text">已知问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%99%E6%98%AF%E5%A6%82%E4%BD%95%E8%BF%90%E4%BD%9C%E7%9A%84%EF%BC%9F"><span class="toc-number">13.5.</span> <span class="toc-text">这是如何运作的？</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#github"><span class="toc-number">14.</span> <span class="toc-text">github</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#lightbox"><span class="toc-number">15.</span> <span class="toc-text">lightbox</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#youtube"><span class="toc-number">16.</span> <span class="toc-text">youtube</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#copyright"><span class="toc-number">17.</span> <span class="toc-text">copyright</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%8F%A0-%E4%B8%BB%E9%A1%B5"><span class="toc-number">17.1.</span> <span class="toc-text">🏠 主页</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%88%E6%9E%9C"><span class="toc-number">17.2.</span> <span class="toc-text">效果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%B9%E8%89%B2"><span class="toc-number">17.3.</span> <span class="toc-text">特色</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E2%9C%A8-%E7%A4%BA%E4%BE%8B"><span class="toc-number">17.4.</span> <span class="toc-text">✨ 示例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%9A%80-%E7%94%A8%E6%B3%95"><span class="toc-number">17.5.</span> <span class="toc-text">🚀 用法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Step-1-%E6%9B%B4%E6%96%B0-book-json-%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-number">17.5.1.</span> <span class="toc-text">Step #1 - 更新 book.json 配置文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Step-2-%E8%BF%90%E8%A1%8C-gitbook-%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4"><span class="toc-number">17.5.2.</span> <span class="toc-text">Step #2 - 运行 gitbook 相关命令</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#tbfed-pagefooter"><span class="toc-number">18.</span> <span class="toc-text">tbfed-pagefooter</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pageview-count"><span class="toc-number">19.</span> <span class="toc-text">pageview-count</span></a></li></ol></div></div><div class="card-widget card-post-series"><div class="item-headline"><i class="fa-solid fa-layer-group"></i><span>Gitbook</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/works/2024/03/18/gitbook%E6%8F%92%E4%BB%B6/" title="Gitbook插件"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/works/img/works%E4%B8%BB%E5%9B%BE.jpg" onerror="this.onerror=null;this.src='/works/img/404.jpg'" alt="Gitbook插件"></a><div class="content"><a class="title" href="/works/2024/03/18/gitbook%E6%8F%92%E4%BB%B6/" title="Gitbook插件">Gitbook插件</a><time datetime="2024-03-18T06:44:09.866Z" title="发表于 2024-03-18 14:44:09">2024-03-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/works/2024/03/18/Gitbook%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/" title="Gitbook安装与配置"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/works/img/works%E4%B8%BB%E5%9B%BE.jpg" onerror="this.onerror=null;this.src='/works/img/404.jpg'" alt="Gitbook安装与配置"></a><div class="content"><a class="title" href="/works/2024/03/18/Gitbook%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/" title="Gitbook安装与配置">Gitbook安装与配置</a><time datetime="2024-03-18T06:44:09.772Z" title="发表于 2024-03-18 14:44:09">2024-03-18</time></div></div></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/works/2024/05/29/sun-panel/" title="sun-panel"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/works/../works/img/cover/sun-panel.jpg" onerror="this.onerror=null;this.src='/works/img/404.jpg'" alt="sun-panel"/></a><div class="content"><a class="title" href="/works/2024/05/29/sun-panel/" title="sun-panel">sun-panel</a><time datetime="2024-05-29T07:25:09.448Z" title="发表于 2024-05-29 15:25:09">2024-05-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/works/2024/05/29/%E7%AC%94%E8%AE%B0%E5%B7%A5%E5%85%B7/" title="Hexo初步搭建"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/works/img/works%E4%B8%BB%E5%9B%BE.jpg" onerror="this.onerror=null;this.src='/works/img/404.jpg'" alt="Hexo初步搭建"/></a><div class="content"><a class="title" href="/works/2024/05/29/%E7%AC%94%E8%AE%B0%E5%B7%A5%E5%85%B7/" title="Hexo初步搭建">Hexo初步搭建</a><time datetime="2024-05-29T07:15:33.000Z" title="发表于 2024-05-29 15:15:33">2024-05-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/works/2024/05/22/hello-world/" title="Hello World"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/works/img/works%E4%B8%BB%E5%9B%BE.jpg" onerror="this.onerror=null;this.src='/works/img/404.jpg'" alt="Hello World"/></a><div class="content"><a class="title" href="/works/2024/05/22/hello-world/" title="Hello World">Hello World</a><time datetime="2024-05-22T01:24:44.068Z" title="发表于 2024-05-22 09:24:44">2024-05-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/works/2024/04/29/%E9%BB%91%E8%8B%B9%E6%9E%9C%E6%A1%88%E4%BE%8B%E4%B8%80/" title="黑苹果硬件配置"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/works/../works/img/cover/desk.jpg" onerror="this.onerror=null;this.src='/works/img/404.jpg'" alt="黑苹果硬件配置"/></a><div class="content"><a class="title" href="/works/2024/04/29/%E9%BB%91%E8%8B%B9%E6%9E%9C%E6%A1%88%E4%BE%8B%E4%B8%80/" title="黑苹果硬件配置">黑苹果硬件配置</a><time datetime="2024-04-29T04:58:31.299Z" title="发表于 2024-04-29 12:58:31">2024-04-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/works/2024/04/29/%E9%BB%91%E8%8B%B9%E6%9E%9C%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E6%A6%82%E8%A7%88/" title="黑苹果系统安装概览"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/works/../works/img/cover/mac-boot-camp.jpg" onerror="this.onerror=null;this.src='/works/img/404.jpg'" alt="黑苹果系统安装概览"/></a><div class="content"><a class="title" href="/works/2024/04/29/%E9%BB%91%E8%8B%B9%E6%9E%9C%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E6%A6%82%E8%A7%88/" title="黑苹果系统安装概览">黑苹果系统安装概览</a><time datetime="2024-04-29T04:58:31.299Z" title="发表于 2024-04-29 12:58:31">2024-04-29</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/works/img/works%E4%B8%BB%E5%9B%BE.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By Red Signals</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi, welcome to my <a target="_blank" rel="noopener" href="https://butterfly.js.org/">blog</a>!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="translateLink" type="button" title="简繁转换">简</button><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="chat-btn" type="button" title="聊天"><i class="fas fa-sms"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/works/js/utils.js?v=4.13.0"></script><script src="/works/js/main.js?v=4.13.0"></script><script src="/works/js/tw_cn.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@5.2.0/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.8/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar@0.1.16/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.1
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, '']
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.min.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typesetPromise()
+}</script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/copy-tex.min.js"></script><script>(() => {
+  document.querySelectorAll('#article-container span.katex-display').forEach(item => {
+    btf.wrap(item, 'div', { class: 'katex-wrap'})
+  })
+})()</script><script>(() => {
+  const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+  if ($mermaid.length === 0) return
+  const runMermaid = () => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+    Array.from($mermaid).forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
+      const mermaidID = 'mermaid-' + index
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+
+      const renderV10 = () => {
+        renderFn.then(({svg}) => {
+          mermaidSrc.insertAdjacentHTML('afterend', svg)
+        })
+      }
+
+      const renderV9 = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
+
+      typeof renderFn === 'string' ? renderV9(renderFn) : renderV10()
+    })
+  }
+
+  const loadMermaid = () => {
+    window.loadMermaid ? runMermaid() : getScript('https://cdn.jsdelivr.net/npm/mermaid@10.8.0/dist/mermaid.min.js').then(runMermaid)
+  }
+
+  btf.addGlobalFn('themeChange', runMermaid, 'mermaid')
+
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script><script>(() => {
+  const abcjsInit = () => {
+    const abcjsFn = () => {
+      document.querySelectorAll(".abc-music-sheet").forEach(ele => {
+        ABCJS.renderAbc(ele, ele.innerHTML, {responsive: 'resize'})
+      })
+    }
+    
+    typeof ABCJS === 'object' ? abcjsFn()
+      : getScript('https://cdn.jsdelivr.net/npm/abcjs@6.3.0/dist/abcjs-basic-min.min.js').then(abcjsFn)
+  }
+
+  window.pjax ? abcjsInit() : window.addEventListener('load', abcjsInit)
+})()</script><script>(() => {
+  let initFn = window.walineFn || null
+
+  const initWaline = (Fn) => {
+    const waline = Fn(Object.assign({
+      el: '#waline-wrap',
+      serverURL: 'https://waline-1-s1845543.deta.app/',
+      pageview: false,
+      dark: 'html[data-theme="dark"]',
+      path: window.location.pathname,
+      comment: false,
+    }, null))
+
+    const destroyWaline = () => {
+      waline.destroy()
+    }
+
+    btf.addGlobalFn('pjax', destroyWaline, 'destroyWaline')
+  }
+
+  const loadWaline = async () => {
+    if (initFn) initWaline(initFn)
+    else {
+      await getCSS('https://cdn.jsdelivr.net/npm/@waline/client@3.1.2/dist/waline.min.css')
+      const { init } = await import('https://cdn.jsdelivr.net/npm/@waline/client@3.1.2/dist/waline.min.js')
+      initFn = init || Waline.init
+      initWaline(initFn)
+      window.walineFn = initFn
+    }
+  }
+
+  if ('Waline' === 'Waline' || !true) {
+    if (true) btf.loadComment(document.getElementById('waline-wrap'),loadWaline)
+    else setTimeout(loadWaline, 0)
+  } else {
+    window.loadOtherComment = loadWaline
+  }
+})()</script><script>(() => {
+  const loadUtterances = () => {
+    let ele = document.createElement('script')
+    ele.id = 'utterances_comment'
+    ele.src = 'https://utteranc.es/client.js'
+    ele.setAttribute('repo', 'red-signalA/red-signalA.github.io')
+    ele.setAttribute('issue-term', 'pathname')
+    const nowTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'photon-dark' : 'github-light'
+    ele.setAttribute('theme', nowTheme)
+    ele.crossOrigin = 'anonymous'
+    ele.async = true
+    document.getElementById('utterances-wrap').appendChild(ele)
+  }
+
+  const utterancesTheme = theme => {
+    const iframe = document.querySelector('.utterances-frame')
+    if (iframe) {
+      const theme = theme === 'dark' ? 'photon-dark' : 'github-light'
+      const message = {
+        type: 'set-theme',
+        theme: theme
+      };
+      iframe.contentWindow.postMessage(message, 'https://utteranc.es');
+    }
+  }
+
+  btf.addGlobalFn('themeChange', utterancesTheme, 'utterances')
+
+  if ('Waline' === 'Utterances' || !true) {
+    if (true) btf.loadComment(document.getElementById('utterances-wrap'), loadUtterances)
+    else loadUtterances()
+  } else {
+    window.loadOtherComment = loadUtterances
+  }
+})()</script></div><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/canvas-nest.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = true;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/click-show-text.min.js" data-mobile="true" data-text="自由,公平,正义" data-fontsize="15px" data-random="true" async="async"></script><script>(() => {
+  const isChatBtn = true
+  const isChatHideShow = false
+
+  if (isChatBtn) {
+    const close = () => {
+      Chatra('minimizeWidget')
+      Chatra('hide')
+    }
+
+    const open = () => {
+      Chatra('openChat', true)
+      Chatra('show')
+    }
+
+    window.ChatraSetup = {
+      startHidden: true
+    }
+  
+    window.chatBtnFn = () => {
+      const isShow = document.getElementById('chatra').classList.contains('chatra--expanded')
+      isShow ? close() : open()
+    }
+  } else if (isChatHideShow) {
+    window.chatBtn = {
+      hide: () => {
+        Chatra('hide')
+      },
+      show: () => {
+        Chatra('show')
+      }
+    }
+  }
+
+  (function(d, w, c) {
+    w.ChatraID = 'DqdzwBi5uYM8cBpEy'
+    var s = d.createElement('script')
+    w[c] = w[c] || function() {
+        (w[c].q = w[c].q || []).push(arguments)
+    }
+    s.async = true
+    s.src = 'https://call.chatra.io/chatra.js'
+    if (d.head) d.head.appendChild(s)
+  })(document, window, 'Chatra')
+
+})()</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/metingjs/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["link[rel=\"canonical\"]","meta[property=\"og:image\"]","meta[property=\"og:title\"]","meta[property=\"og:url\"]","head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener
+  btf.removeGlobalFnEvent('pjax')
+  btf.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/works/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/works/js/search/local-search.js?v=4.13.0"></script></div></div><!-- hexo injector body_end start -->
+<script src="/works/js/collapse.js"></script>
+<!-- hexo injector body_end end --><script src="/works/js/markmap.js"></script></body></html>

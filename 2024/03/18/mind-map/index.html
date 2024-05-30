@@ -1,0 +1,630 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><!-- hexo injector head_begin start -->
+<link rel="stylesheet" href="/works/css/bilicard.css">
+<style type="text/css">.douban-card-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-height: 400px;
+}
+
+.douban-card {
+    display: flex;
+    margin: 30px 10px;
+    padding: 15px;
+    border-radius: 15px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: antiquewhite;
+    text-decoration: none;
+}
+
+.douban-card:hover {
+    text-decoration: none;
+}
+
+.douban-card-bgimg {
+    position: absolute;
+    width: 115%;
+    height: 115%;
+    filter: blur(15px) brightness(0.6);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.douban-card-img {
+    position: relative;
+    height: 130px;
+    width: 80px;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.douban-card-left:hover .douban-card-img {
+    filter: blur(5px) brightness(0.6);
+    transform: perspective(800px) rotateX(180deg);
+}
+
+.douban-card-left .douban-card-img {
+    transition: all 500ms ease;
+}
+
+.douban-card-left {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.douban-card-left .douban-card-status {
+    height: 130px;
+    width: 80px;
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 30%;
+    transform: rotateX(180deg);
+    backface-visibility: hidden;
+    transition: all 500ms ease;
+}
+
+.douban-card-left:hover .douban-card-status {
+    transform: perspective(800px) rotateX(0deg);
+}
+
+.douban-card-right {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: 12px;
+    font-size: 16px;
+    font-family: "Courier New", Courier, monospace;
+    line-height: 1.3;
+    color: antiquewhite;
+}
+
+.douban-card-item {
+    margin-top: 4px;
+}
+</style><!-- hexo injector head_begin end --><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Mind map | Works</title><meta name="author" content="Red Signals"><meta name="copyright" content="Red Signals"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="文档https:&#x2F;&#x2F;wanglin2.github.io&#x2F;mind-map&#x2F;#&#x2F;doc&#x2F;zh&#x2F;deploy 部署本项目的web目录下提供了一个基于simple-mind-map库、Vue2.x、ElementUI开发的完整项目，数据默认存储在电脑本地，此外可以操作电脑本地文件，原意是作为一个线上demo，但是也完全可以直接把它当做一个在线版思维导图应用使用，在线地址： https:">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mind map">
+<meta property="og:url" content="https://red-signals.github.io/Works/2024/03/18/mind-map/index.html">
+<meta property="og:site_name" content="Works">
+<meta property="og:description" content="文档https:&#x2F;&#x2F;wanglin2.github.io&#x2F;mind-map&#x2F;#&#x2F;doc&#x2F;zh&#x2F;deploy 部署本项目的web目录下提供了一个基于simple-mind-map库、Vue2.x、ElementUI开发的完整项目，数据默认存储在电脑本地，此外可以操作电脑本地文件，原意是作为一个线上demo，但是也完全可以直接把它当做一个在线版思维导图应用使用，在线地址： https:">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://red-signals.github.io/Works/img/works%E4%B8%BB%E5%9B%BE.jpg">
+<meta property="article:published_time" content="2024-03-18T06:44:09.578Z">
+<meta property="article:modified_time" content="2024-05-29T09:28:09.584Z">
+<meta property="article:author" content="Red Signals">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://red-signals.github.io/Works/img/works%E4%B8%BB%E5%9B%BE.jpg"><link rel="shortcut icon" href="/works/img/works%E5%A4%B4%E5%83%8F.png"><link rel="canonical" href="https://red-signals.github.io/Works/2024/03/18/mind-map/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.clarity.ms"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/works/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>(function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+})(window, document, "clarity", "script", "lfvkwtllmi");</script><script>const GLOBAL_CONFIG = {
+  root: '/works/',
+  algolia: undefined,
+  localSearch: {"path":"/works/search.xml","preload":true,"top_n_per_article":1,"unescape":true,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: Red Signals","link":"链接: ","source":"来源: Works","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'mediumZoom',
+  Snackbar: {"chs_to_cht":"你已切换为繁体中文","cht_to_chs":"你已切换为简体中文","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"top-center"},
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: true,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Mind map',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-05-29 17:28:09'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 8 || hour >= 22
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><link rel="stylesheet" href="/config/css/custom.css"><link rel="stylesheet" href="/works/config/css/custom.css"><!-- hexo injector head_end start -->
+<link rel="stylesheet" href="/works/css/collapse.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-double-row-display@1.00/cardlistpost.min.css"/>
+<style>#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags:before {content:"\A";
+  white-space: pre;}#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags > .article-meta__separator{display:none}</style>
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head><body><script>window.paceOptions = {
+  restartOnPushState: false
+}
+
+document.addEventListener('pjax:send', () => {
+  Pace.restart()
+})
+</script><link rel="stylesheet" href="/works/css/center-simple.css"/><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/works/img/works%E5%A4%B4%E5%83%8F.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/works/archives/"><div class="headline">文章</div><div class="length-num">61</div></a><a href="/works/tags/"><div class="headline">标签</div><div class="length-num">24</div></a><a href="/works/categories/"><div class="headline">分类</div><div class="length-num">24</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="https://red-signals.github.io/work"><i class="fa-fw fas fa-solid fa-street-view"></i><span> Work</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-cogs fa-fade"></i><span> 系统</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/works/%E7%B3%BB%E7%BB%9F/Win/"><i class="fa-fw fas fa-brands fa-windows"></i><span> Win</span></a></li><li><a class="site-page child" href="/works/%E7%B3%BB%E7%BB%9F/Mac/"><i class="fa-fw fas fa-brands fa-apple"></i><span> Mac</span></a></li><li><a class="site-page child" href="/works/%E7%B3%BB%E7%BB%9F/Linux/"><i class="fa-fw fab fa-linux"></i><span> Linux</span></a></li><li><a class="site-page child" href="/works/%E7%B3%BB%E7%BB%9F/Phone/"><i class="fa-fw fas fa-mobile-alt"></i><span> Phone</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-globe fa-fade"></i><span> 网络</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/works/%E7%BD%91%E7%BB%9C/Github/"><i class="fa-fw fab fa-github"></i><span> Github</span></a></li><li><a class="site-page child" href="/works/%E7%BD%91%E7%BB%9C/Vmware/"><i class="fa-fw fas fa-server"></i><span> Vmware</span></a></li><li><a class="site-page child" href="/works/%E7%BD%91%E7%BB%9C/Phpstudy/"><i class="fa-fw fas fa-book"></i><span> Phpstudy</span></a></li><li><a class="site-page child" href="/works/%E7%BD%91%E7%BB%9C/%E6%9C%8D%E5%8A%A1%E5%99%A8/"><i class="fa-fw fas fa-server"></i><span> 服务器</span></a></li><li><a class="site-page child" href="/works/%E7%BD%91%E7%BB%9C/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"><i class="fa-fw fas fa-shield-alt"></i><span> 科学上网</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-shopping-cart fa-fade"></i><span> 网店</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/works/%E7%BD%91%E5%BA%97/%E5%B9%B3%E5%8F%B0/"><i class="fa-fw fas fa-store"></i><span> 平台</span></a></li><li><a class="site-page child" href="/works/%E7%BD%91%E5%BA%97/%E5%95%86%E5%93%81/"><i class="fa-fw fas fa-tag"></i><span> 商品</span></a></li><li><a class="site-page child" href="/works/%E7%BD%91%E5%BA%97/%E8%BF%90%E8%90%A5/"><i class="fa-fw fas fa-cogs"></i><span> 运营</span></a></li><li><a class="site-page child" href="/works/%E7%BD%91%E5%BA%97/%E5%B7%A5%E5%85%B7/"><i class="fa-fw fas fa-wrench"></i><span> 工具</span></a></li><li><a class="site-page child" href="/works/%E7%BD%91%E5%BA%97/%E7%94%9F%E4%BA%A7%E8%B5%84%E6%96%99/"><i class="fa-fw fas fa-industry"></i><span> 生产资料</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-money-bill-wave fa-fade"></i><span> 网赚</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/works/%E7%BD%91%E8%B5%9A/%E7%BA%BF%E6%8A%A5/"><i class="fa-fw fas fa-newspaper"></i><span> 线报</span></a></li><li><a class="site-page child" href="/works/%E7%BD%91%E8%B5%9A/%E5%B7%A5%E5%85%B7/"><i class="fa-fw fas fa-tools"></i><span> 工具</span></a></li><li><a class="site-page child" href="/works/%E7%BD%91%E8%B5%9A/%E7%94%9F%E4%BA%A7%E8%B5%84%E6%96%99/"><i class="fa-fw fas fa-industry"></i><span> 生产资料</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-bullhorn fa-fade"></i><span> 自媒体</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/works/%E8%87%AA%E5%AA%92%E4%BD%93/%E5%B9%B3%E5%8F%B0/"><i class="fa-fw fas fa-broadcast-tower"></i><span> 平台</span></a></li><li><a class="site-page child" href="/works/%E8%87%AA%E5%AA%92%E4%BD%93/%E5%86%85%E5%AE%B9/"><i class="fa-fw fas fa-file-alt"></i><span> 内容</span></a></li><li><a class="site-page child" href="/works/%E8%87%AA%E5%AA%92%E4%BD%93/%E5%B7%A5%E5%85%B7/"><i class="fa-fw fas fa-tools"></i><span> 工具</span></a></li><li><a class="site-page child" href="/works/%E8%87%AA%E5%AA%92%E4%BD%93/%E7%94%9F%E4%BA%A7%E8%B5%84%E6%96%99/"><i class="fa-fw fas fa-industry"></i><span> 生产资料</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list-check"></i><span> 功能</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/works/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/works/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/works/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page child" href="/works/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></li><li><a class="site-page child" href="/works/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url('/works/img/works%E4%B8%BB%E5%9B%BE.jpg')"><nav id="nav"><span id="blog-info"><a href="/works/" title="Works"><img class="site-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/works/img/works%E5%A4%B4%E5%83%8F.png"/></a></span><div id="menus"></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="https://red-signals.github.io/work"><i class="fa-fw fas fa-solid fa-street-view"></i><span> Work</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-cogs fa-fade"></i><span> 系统</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/works/%E7%B3%BB%E7%BB%9F/Win/"><i class="fa-fw fas fa-brands fa-windows"></i><span> Win</span></a></li><li><a class="site-page child" href="/works/%E7%B3%BB%E7%BB%9F/Mac/"><i class="fa-fw fas fa-brands fa-apple"></i><span> Mac</span></a></li><li><a class="site-page child" href="/works/%E7%B3%BB%E7%BB%9F/Linux/"><i class="fa-fw fab fa-linux"></i><span> Linux</span></a></li><li><a class="site-page child" href="/works/%E7%B3%BB%E7%BB%9F/Phone/"><i class="fa-fw fas fa-mobile-alt"></i><span> Phone</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-globe fa-fade"></i><span> 网络</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/works/%E7%BD%91%E7%BB%9C/Github/"><i class="fa-fw fab fa-github"></i><span> Github</span></a></li><li><a class="site-page child" href="/works/%E7%BD%91%E7%BB%9C/Vmware/"><i class="fa-fw fas fa-server"></i><span> Vmware</span></a></li><li><a class="site-page child" href="/works/%E7%BD%91%E7%BB%9C/Phpstudy/"><i class="fa-fw fas fa-book"></i><span> Phpstudy</span></a></li><li><a class="site-page child" href="/works/%E7%BD%91%E7%BB%9C/%E6%9C%8D%E5%8A%A1%E5%99%A8/"><i class="fa-fw fas fa-server"></i><span> 服务器</span></a></li><li><a class="site-page child" href="/works/%E7%BD%91%E7%BB%9C/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"><i class="fa-fw fas fa-shield-alt"></i><span> 科学上网</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-shopping-cart fa-fade"></i><span> 网店</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/works/%E7%BD%91%E5%BA%97/%E5%B9%B3%E5%8F%B0/"><i class="fa-fw fas fa-store"></i><span> 平台</span></a></li><li><a class="site-page child" href="/works/%E7%BD%91%E5%BA%97/%E5%95%86%E5%93%81/"><i class="fa-fw fas fa-tag"></i><span> 商品</span></a></li><li><a class="site-page child" href="/works/%E7%BD%91%E5%BA%97/%E8%BF%90%E8%90%A5/"><i class="fa-fw fas fa-cogs"></i><span> 运营</span></a></li><li><a class="site-page child" href="/works/%E7%BD%91%E5%BA%97/%E5%B7%A5%E5%85%B7/"><i class="fa-fw fas fa-wrench"></i><span> 工具</span></a></li><li><a class="site-page child" href="/works/%E7%BD%91%E5%BA%97/%E7%94%9F%E4%BA%A7%E8%B5%84%E6%96%99/"><i class="fa-fw fas fa-industry"></i><span> 生产资料</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-money-bill-wave fa-fade"></i><span> 网赚</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/works/%E7%BD%91%E8%B5%9A/%E7%BA%BF%E6%8A%A5/"><i class="fa-fw fas fa-newspaper"></i><span> 线报</span></a></li><li><a class="site-page child" href="/works/%E7%BD%91%E8%B5%9A/%E5%B7%A5%E5%85%B7/"><i class="fa-fw fas fa-tools"></i><span> 工具</span></a></li><li><a class="site-page child" href="/works/%E7%BD%91%E8%B5%9A/%E7%94%9F%E4%BA%A7%E8%B5%84%E6%96%99/"><i class="fa-fw fas fa-industry"></i><span> 生产资料</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-bullhorn fa-fade"></i><span> 自媒体</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/works/%E8%87%AA%E5%AA%92%E4%BD%93/%E5%B9%B3%E5%8F%B0/"><i class="fa-fw fas fa-broadcast-tower"></i><span> 平台</span></a></li><li><a class="site-page child" href="/works/%E8%87%AA%E5%AA%92%E4%BD%93/%E5%86%85%E5%AE%B9/"><i class="fa-fw fas fa-file-alt"></i><span> 内容</span></a></li><li><a class="site-page child" href="/works/%E8%87%AA%E5%AA%92%E4%BD%93/%E5%B7%A5%E5%85%B7/"><i class="fa-fw fas fa-tools"></i><span> 工具</span></a></li><li><a class="site-page child" href="/works/%E8%87%AA%E5%AA%92%E4%BD%93/%E7%94%9F%E4%BA%A7%E8%B5%84%E6%96%99/"><i class="fa-fw fas fa-industry"></i><span> 生产资料</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list-check"></i><span> 功能</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/works/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/works/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/works/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page child" href="/works/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></li><li><a class="site-page child" href="/works/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></li></ul></div></div><div id="nav-right"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Mind map</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-03-18T06:44:09.578Z" title="发表于 2024-03-18 14:44:09">2024-03-18</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-05-29T09:28:09.584Z" title="更新于 2024-05-29 17:28:09">2024-05-29</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/works/categories/%E7%BD%91%E7%BB%9C/">网络</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/works/categories/%E7%BD%91%E7%BB%9C/Github/">Github</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/works/categories/%E7%BD%91%E7%BB%9C/Github/Github-Software/">Github Software</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">2.1k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>7分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Mind map"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><div style="text-align: center">
+  <div class="github-card"
+    data-user="wanglin2"
+    data-repo="mind-map"
+    data-height="120"
+    data-width="780"
+    data-theme="default"
+    data-target=""
+    data-client-id=""
+    data-client-secret=""
+  ></div>
+</div>
+<script src="/works/github-card-lib/githubcard.js"></script>
+
+
+<h2 id="文档"><a href="#文档" class="headerlink" title="文档"></a>文档</h2><p><a target="_blank" rel="noopener" href="https://wanglin2.github.io/mind-map/#/doc/zh/deploy">https://wanglin2.github.io/mind-map/#/doc/zh/deploy</a></p>
+<h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><p>本项目的web目录下提供了一个基于simple-mind-map库、Vue2.x、ElementUI开发的完整项目，数据默认存储在电脑本地，此外可以操作电脑本地文件，原意是作为一个线上demo，但是也完全可以直接把它当做一个在线版思维导图应用使用，在线地址： <a target="_blank" rel="noopener" href="https://wanglin2.github.io/mind-map/">https://wanglin2.github.io/mind-map/</a>。 如果你的网络环境访问GitHub服务很慢，你也可以部署到你的服务器上。</p>
+<h3 id="部署到静态文件服务器"><a href="#部署到静态文件服务器" class="headerlink" title="部署到静态文件服务器"></a>部署到静态文件服务器</h3><p>项目本身不依赖后端，所以完全可以部署到一个静态文件服务器上，可以依次执行如下命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">git clonehttps://github.com/wanglin2/mind-map.git</span><br><span class="line">cdmind-map</span><br><span class="line">cdsimple-mind-map</span><br><span class="line">npm i</span><br><span class="line">npm link</span><br><span class="line">cd..</span><br><span class="line">cdweb</span><br><span class="line">npm i</span><br><span class="line">npm link simple-mind-map</span><br></pre></td></tr></table></figure>
+
+<p>  然后你可以选择启动本地服务：   <code>npm run serve</code> 也可以直接打包生成构建产物： <code>npm run build</code> 打包完后的入口页面index.html可以在项目根目录找到，对应的静态资源在根目录下的dist目录，html文件中会通过相对路径访问dist目录的资源，比如dist&#x2F;xxx。你可以直接把这两个文件或目录上传到你的静态文件服务器，事实上，本项目就是这样部署到GitHub Pages上的。 如果你没有代码修改需求的话，直接从本仓库复制这些文件也是可以的。 如果你想把index.html也打包进dist目录，可以修改web&#x2F;package.json文件的scripts.build命令，把vue-cli-service build &amp;&amp; node ..&#x2F;copy.js中的 &amp;&amp; node ..&#x2F;copy.js删除即可。 如果你想修改打包输出的目录，可以修改web&#x2F;vue.config.js文件的outputDir配置，改成你想要输出的路径即可。 如果你想修改index.html文件引用静态资源的路径的话可以修改web&#x2F;vue.config.js文件的publicPath配置。以及web&#x2F;public&#x2F;index.html文件的window.externalPublicPath配置。 另外默认使用的是hash路由，也就是路径中会在#，如果你想使用history路由，可以修改web&#x2F;src&#x2F;router.js文件，将：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">constrouter = newVueRouter(&#123;</span><br><span class="line">  routes</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>改成：  </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">constrouter = newVueRouter(&#123;</span><br><span class="line">  mode: &#x27;history&#x27;,</span><br><span class="line">  routes</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>不过这需要后台支持，因为我们的应用是个单页客户端应用，如果后台没有正确的配置，当用户在浏览器直接访问子路由时会返回404，所以呢你要在服务端增加一个覆盖所有情况的候选资源：如果URL匹配不到任何静态资源，则应该返回同一个index.html页面。  </p>
+<h3 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h3><p>非常感谢<a target="_blank" rel="noopener" href="https://github.com/shuiche-it">水车</a>，本小节由他编写，对应的 Docker 包也由他维护。 直接从 Docker hup 中安装:</p>
+<p><code>docker run -d -p 8082:8080 shuiche/mind-map:latest</code></p>
+<p>mind-map在容器中启动了8080端口作为web服务入口，通过docker运行容器时，需要指定本地映射端口，上面案例中，我们通过本地的8081端口映射到容器端口8080。 安装完成后，通过 docker ps 查看容器运行状态。 浏览器打开 127.0.0.1:8081 即可使用Web 思维导图功能。 此时，项目的新建保存功能还不能使用需要进行如下操作将ssl证书部署到容器内才能通过https的方式正常保存新建项目。 ssl证书部署到容器以失败告终，最终采用直接克隆复制到wordpress根目录的方式在网站打开使用，同时需要部署证书到网站以使用https。这样最终才能使用打开保存新建的功能。</p>
+<ul>
+<li>打开宝塔面板设置中的ssl证书功能，找到ssl证书的安装路径：&#x2F;www&#x2F;server&#x2F;panel&#x2F;ssl</li>
+<li>docker run [cool_goldberg] -d -p 8082:8080 -v&#x2F;www&#x2F;server&#x2F;panel&#x2F;ssl&#x2F;cert:&#x2F;var&#x2F;lib&#x2F;docker&#x2F;containers&#x2F;7227f8fa2a45c1e2a793e0632943a8af7ef0a63bcf8f6f806cb152fd1c664e2c:latest</li>
+<li>容器id：7227f8fa2a45c1e2a793e0632943a8af7ef0a63bcf8f6f806cb152fd1c664e2c</li>
+<li>容器路径：var&#x2F;lib&#x2F;docker&#x2F;containers&#x2F;7227f8fa2a45c1e2a793e0632943a8af7ef0a63bcf8f6f806cb152fd1c664e2c</li>
+<li>证书路径：www&#x2F;server&#x2F;panel&#x2F;ssl</li>
+<li>容器名称：&#x2F;cool_goldberg</li>
+</ul>
+<p>直接部署到docker的命令如下： <code>docker run -d -p 8082:8080 -v www/server/panel/ssl/cert:var/lib/docker/containers/7227f8fa2a45c1e2a793e0632943a8af7ef0a63bcf8f6f806cb152fd1c664e2c:latest</code> <a target="_blank" rel="noopener" href="https://laosu.gq/2023/09/02/%E5%BC%BA%E5%A4%A7%E7%9A%84%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE%E5%BA%93SimpleMindMap/">在群晖上以 Docker 方式安装</a></p>
+<h3 id="对接自己的存储服务"><a href="#对接自己的存储服务" class="headerlink" title="对接自己的存储服务"></a>对接自己的存储服务</h3><p>应用数据默认存储在浏览器本地，浏览器本地存储容量是比较小的，所以当在思维导图中插入更多图片后很容易触发限制，所以更好的选择是对接你自己的存储服务，这通常有两种方式： 第一种 直接clone本仓库代码，然后修改web&#x2F;src&#x2F;api&#x2F;index.js内的相关方法即可实现从你的数据库里获取数据，以及存储到你的数据中。 第二种 很多时候，你可能想始终使用本仓库的最新代码，那么第一种方式就不太方便，因为你要手动去合并代码，所以提供了第二种方式。 具体操作步骤： 1.复制web应用打包后的资源 包括：dist目录和index.html文件。 2.修改复制后的index.html文件 首先在head标签里插入如下代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">  window.takeOverApp = true</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>这行代码会提示应用不要初始化应用即：new Vue()，而是把控制权交给你，接下来再在body的最后插入你自己的js代码，内联或则外链都可以，内联示例如下：  </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">  // 你自己的请求数据的方法constgetDataFromBackend = () =&gt;&#123;</span><br><span class="line">    returnnewPromise((resolve, reject) =&gt;&#123;</span><br><span class="line">      setTimeout(() =&gt;&#123;</span><br><span class="line">        resolve(&#123;</span><br><span class="line">          // 思维导图数据mindMapData: &#123;</span><br><span class="line">            root: &#123;</span><br><span class="line">              &quot;data&quot;: &#123;</span><br><span class="line">                  &quot;text&quot;: &quot;根节点&quot;&#125;,</span><br><span class="line">              &quot;children&quot;: []</span><br><span class="line">            &#125;,</span><br><span class="line">            theme: &#123; &quot;template&quot;:&quot;avocado&quot;,&quot;config&quot;:&#123;&#125; &#125;,</span><br><span class="line">            layout: &quot;logicalStructure&quot;,</span><br><span class="line">            config: &#123;&#125;,</span><br><span class="line">            view: &#123;&#125;</span><br><span class="line">          &#125;,</span><br><span class="line">          // 页面语言，支持中文（zh）、英文（en）lang: &#x27;zh&#x27;,</span><br><span class="line">          // 页面部分配置localConfig: null&#125;)</span><br><span class="line">      &#125;, 200)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">  // 注册全局方法constsetTakeOverAppMethods = (data) =&gt;&#123;</span><br><span class="line">    window.takeOverAppMethods = &#123;&#125;</span><br><span class="line">    // 获取思维导图数据的函数window.takeOverAppMethods.getMindMapData = () =&gt;&#123;</span><br><span class="line">      returndata.mindMapData</span><br><span class="line">    &#125;</span><br><span class="line">    // 保存思维导图数据的函数window.takeOverAppMethods.saveMindMapData = (data) =&gt;&#123;</span><br><span class="line">      console.log(data)</span><br><span class="line">      // 该函数触发频率可能会很高，所以你应该做一下节流或防抖&#125;</span><br><span class="line">    // 获取语言的函数window.takeOverAppMethods.getLanguage = () =&gt;&#123;</span><br><span class="line">      returndata.lang</span><br><span class="line">    &#125;</span><br><span class="line">    // 保存语言的函数window.takeOverAppMethods.saveLanguage = (lang) =&gt;&#123;</span><br><span class="line">      console.log(lang)</span><br><span class="line">    &#125;</span><br><span class="line">    // 获取本地配置的函数window.takeOverAppMethods.getLocalConfig = () =&gt;&#123;</span><br><span class="line">      returndata.localConfig</span><br><span class="line">    &#125;</span><br><span class="line">    // 保存本地配置的函数window.takeOverAppMethods.saveLocalConfig = (config) =&gt;&#123;</span><br><span class="line">      console.log(config)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  window.onload = async() =&gt; &#123;</span><br><span class="line">    if(!window.takeOverApp) return// 请求数据constdata = awaitgetDataFromBackend()</span><br><span class="line">    // 设置全局的方法setTakeOverAppMethods(data)</span><br><span class="line">    // 思维导图实例创建完成事件window.$bus.$on(&#x27;app_inited&#x27;, (mindMap) =&gt;&#123;</span><br><span class="line">      console.log(mindMap)</span><br><span class="line">    &#125;)</span><br><span class="line">    // 可以通过window.$bus.$on()来监听应用的一些事件// 实例化页面window.initApp()</span><br><span class="line">  &#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>如上所示，当你设置了window.takeOverApp &#x3D; true标志，应用不再主动进行实例化，而是会将实例化的方法暴露出来由你调用，那么你可以先从后端请求思维导图的数据，然后再注册相关的方法，应用内部会在合适的时机进行调用，从而达到回显和保存的目的。   这样做的好处是，每当本仓库代码更新了，你可以简单的复制打包后的文件到你自己的服务器，只要稍微修改一下index.html页面即可达到同步更新且使用自己的存储服务的目的。</p>
+<h2 id="修改静态资源路径"><a href="#修改静态资源路径" class="headerlink" title="修改静态资源路径"></a>修改静态资源路径</h2><p>如果你想和上一节一样保持和本仓库代码的同步更新，但是又想修改静态资源的存放位置，比如默认的层级关系为：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">-dist</span><br><span class="line">--css</span><br><span class="line">--fonts</span><br><span class="line">--img</span><br><span class="line">--js</span><br><span class="line">-logo.ico</span><br><span class="line">-index.html</span><br></pre></td></tr></table></figure>
+
+<p>而你想调整成这样：  </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">-assets</span><br><span class="line">--dist</span><br><span class="line">---css</span><br><span class="line">---fonts</span><br><span class="line">---img</span><br><span class="line">---js</span><br><span class="line">-logo.ico</span><br><span class="line">-index.html</span><br></pre></td></tr></table></figure>
+
+<p>那么你可以将index.html中的window.externalPublicPath配置由默认的.&#x2F;dist&#x2F;修改为：   <code>window.externalPublicPath = &#39;./assets/dist/&#39;</code> 同时index.html中内联的.ico、.js、.css资源的路径需要你手动修改。 需要注意的是，dist目录内的目录层级关系最好不要调整，否则可能会出现异常。 如果你想替换其中的一些静态资源，比如你想将主题图片和结构的图片替换成你自己设计的图片，那么可以直接同名覆盖。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="red signal">Red Signals</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://red-signals.github.io/Works/2024/03/18/mind-map/">https://red-signals.github.io/Works/2024/03/18/mind-map/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://red-signals.github.io/Works" target="_blank">Works</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/works/img/works%E4%B8%BB%E5%9B%BE.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>赞助</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/works/img/%E5%BE%AE%E4%BF%A1.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/works/img/%E5%BE%AE%E4%BF%A1.jpg" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/works/img/%E6%94%AF%E4%BB%98%E5%AE%9D.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/works/img/%E6%94%AF%E4%BB%98%E5%AE%9D.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/works/2024/03/18/Alist/" title="Alist"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/works/../img/cover/10ur6kg-0.webp" onerror="onerror=null;src='/works/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Alist</div></div></a></div><div class="next-post pull-right"><a href="/works/2024/03/18/Gitbook%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/" title="Gitbook安装与配置"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/works/img/works%E4%B8%BB%E5%9B%BE.jpg" onerror="onerror=null;src='/works/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Gitbook安装与配置</div></div></a></div></nav><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div class="comment-switch"><span class="first-comment">Waline</span><span id="switch-btn"></span><span class="second-comment">Utterances</span></div></div><div class="comment-wrap"><div><div id="waline-wrap"></div></div><div><div id="utterances-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/works/img/works%E5%A4%B4%E5%83%8F.png" onerror="this.onerror=null;this.src='/works/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Red Signals</div><div class="author-info__description">胜人者有力，自胜者强</div></div><div class="card-info-data site-data is-center"><a href="/works/archives/"><div class="headline">文章</div><div class="length-num">61</div></a><a href="/works/tags/"><div class="headline">标签</div><div class="length-num">24</div></a><a href="/works/categories/"><div class="headline">分类</div><div class="length-num">24</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/red-signals"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/red-signals" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="/works/aimeikeji135@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">知人者智，自知者明</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E6%A1%A3"><span class="toc-number">1.</span> <span class="toc-text">文档</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2"><span class="toc-number">2.</span> <span class="toc-text">部署</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2%E5%88%B0%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-number">2.1.</span> <span class="toc-text">部署到静态文件服务器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Docker"><span class="toc-number">2.2.</span> <span class="toc-text">Docker</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E6%8E%A5%E8%87%AA%E5%B7%B1%E7%9A%84%E5%AD%98%E5%82%A8%E6%9C%8D%E5%8A%A1"><span class="toc-number">2.3.</span> <span class="toc-text">对接自己的存储服务</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E8%B7%AF%E5%BE%84"><span class="toc-number">3.</span> <span class="toc-text">修改静态资源路径</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/works/2024/05/29/sun-panel/" title="sun-panel"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/works/../works/img/cover/sun-panel.jpg" onerror="this.onerror=null;this.src='/works/img/404.jpg'" alt="sun-panel"/></a><div class="content"><a class="title" href="/works/2024/05/29/sun-panel/" title="sun-panel">sun-panel</a><time datetime="2024-05-29T07:25:09.448Z" title="发表于 2024-05-29 15:25:09">2024-05-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/works/2024/05/29/%E7%AC%94%E8%AE%B0%E5%B7%A5%E5%85%B7/" title="Hexo初步搭建"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/works/img/works%E4%B8%BB%E5%9B%BE.jpg" onerror="this.onerror=null;this.src='/works/img/404.jpg'" alt="Hexo初步搭建"/></a><div class="content"><a class="title" href="/works/2024/05/29/%E7%AC%94%E8%AE%B0%E5%B7%A5%E5%85%B7/" title="Hexo初步搭建">Hexo初步搭建</a><time datetime="2024-05-29T07:15:33.000Z" title="发表于 2024-05-29 15:15:33">2024-05-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/works/2024/05/22/hello-world/" title="Hello World"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/works/img/works%E4%B8%BB%E5%9B%BE.jpg" onerror="this.onerror=null;this.src='/works/img/404.jpg'" alt="Hello World"/></a><div class="content"><a class="title" href="/works/2024/05/22/hello-world/" title="Hello World">Hello World</a><time datetime="2024-05-22T01:24:44.068Z" title="发表于 2024-05-22 09:24:44">2024-05-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/works/2024/04/29/%E9%BB%91%E8%8B%B9%E6%9E%9C%E6%A1%88%E4%BE%8B%E4%B8%80/" title="黑苹果硬件配置"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/works/../works/img/cover/desk.jpg" onerror="this.onerror=null;this.src='/works/img/404.jpg'" alt="黑苹果硬件配置"/></a><div class="content"><a class="title" href="/works/2024/04/29/%E9%BB%91%E8%8B%B9%E6%9E%9C%E6%A1%88%E4%BE%8B%E4%B8%80/" title="黑苹果硬件配置">黑苹果硬件配置</a><time datetime="2024-04-29T04:58:31.299Z" title="发表于 2024-04-29 12:58:31">2024-04-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/works/2024/04/29/%E9%BB%91%E8%8B%B9%E6%9E%9C%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E6%A6%82%E8%A7%88/" title="黑苹果系统安装概览"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/works/../works/img/cover/mac-boot-camp.jpg" onerror="this.onerror=null;this.src='/works/img/404.jpg'" alt="黑苹果系统安装概览"/></a><div class="content"><a class="title" href="/works/2024/04/29/%E9%BB%91%E8%8B%B9%E6%9E%9C%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E6%A6%82%E8%A7%88/" title="黑苹果系统安装概览">黑苹果系统安装概览</a><time datetime="2024-04-29T04:58:31.299Z" title="发表于 2024-04-29 12:58:31">2024-04-29</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/works/img/works%E4%B8%BB%E5%9B%BE.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By Red Signals</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi, welcome to my <a target="_blank" rel="noopener" href="https://butterfly.js.org/">blog</a>!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="translateLink" type="button" title="简繁转换">简</button><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="chat-btn" type="button" title="聊天"><i class="fas fa-sms"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/works/js/utils.js?v=4.13.0"></script><script src="/works/js/main.js?v=4.13.0"></script><script src="/works/js/tw_cn.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@5.2.0/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.8/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar@0.1.16/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.1
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, '']
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.min.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typesetPromise()
+}</script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/copy-tex.min.js"></script><script>(() => {
+  document.querySelectorAll('#article-container span.katex-display').forEach(item => {
+    btf.wrap(item, 'div', { class: 'katex-wrap'})
+  })
+})()</script><script>(() => {
+  const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+  if ($mermaid.length === 0) return
+  const runMermaid = () => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+    Array.from($mermaid).forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
+      const mermaidID = 'mermaid-' + index
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+
+      const renderV10 = () => {
+        renderFn.then(({svg}) => {
+          mermaidSrc.insertAdjacentHTML('afterend', svg)
+        })
+      }
+
+      const renderV9 = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
+
+      typeof renderFn === 'string' ? renderV9(renderFn) : renderV10()
+    })
+  }
+
+  const loadMermaid = () => {
+    window.loadMermaid ? runMermaid() : getScript('https://cdn.jsdelivr.net/npm/mermaid@10.8.0/dist/mermaid.min.js').then(runMermaid)
+  }
+
+  btf.addGlobalFn('themeChange', runMermaid, 'mermaid')
+
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script><script>(() => {
+  const abcjsInit = () => {
+    const abcjsFn = () => {
+      document.querySelectorAll(".abc-music-sheet").forEach(ele => {
+        ABCJS.renderAbc(ele, ele.innerHTML, {responsive: 'resize'})
+      })
+    }
+    
+    typeof ABCJS === 'object' ? abcjsFn()
+      : getScript('https://cdn.jsdelivr.net/npm/abcjs@6.3.0/dist/abcjs-basic-min.min.js').then(abcjsFn)
+  }
+
+  window.pjax ? abcjsInit() : window.addEventListener('load', abcjsInit)
+})()</script><script>(() => {
+  let initFn = window.walineFn || null
+
+  const initWaline = (Fn) => {
+    const waline = Fn(Object.assign({
+      el: '#waline-wrap',
+      serverURL: 'https://waline-1-s1845543.deta.app/',
+      pageview: false,
+      dark: 'html[data-theme="dark"]',
+      path: window.location.pathname,
+      comment: false,
+    }, null))
+
+    const destroyWaline = () => {
+      waline.destroy()
+    }
+
+    btf.addGlobalFn('pjax', destroyWaline, 'destroyWaline')
+  }
+
+  const loadWaline = async () => {
+    if (initFn) initWaline(initFn)
+    else {
+      await getCSS('https://cdn.jsdelivr.net/npm/@waline/client@3.1.2/dist/waline.min.css')
+      const { init } = await import('https://cdn.jsdelivr.net/npm/@waline/client@3.1.2/dist/waline.min.js')
+      initFn = init || Waline.init
+      initWaline(initFn)
+      window.walineFn = initFn
+    }
+  }
+
+  if ('Waline' === 'Waline' || !true) {
+    if (true) btf.loadComment(document.getElementById('waline-wrap'),loadWaline)
+    else setTimeout(loadWaline, 0)
+  } else {
+    window.loadOtherComment = loadWaline
+  }
+})()</script><script>(() => {
+  const loadUtterances = () => {
+    let ele = document.createElement('script')
+    ele.id = 'utterances_comment'
+    ele.src = 'https://utteranc.es/client.js'
+    ele.setAttribute('repo', 'red-signalA/red-signalA.github.io')
+    ele.setAttribute('issue-term', 'pathname')
+    const nowTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'photon-dark' : 'github-light'
+    ele.setAttribute('theme', nowTheme)
+    ele.crossOrigin = 'anonymous'
+    ele.async = true
+    document.getElementById('utterances-wrap').appendChild(ele)
+  }
+
+  const utterancesTheme = theme => {
+    const iframe = document.querySelector('.utterances-frame')
+    if (iframe) {
+      const theme = theme === 'dark' ? 'photon-dark' : 'github-light'
+      const message = {
+        type: 'set-theme',
+        theme: theme
+      };
+      iframe.contentWindow.postMessage(message, 'https://utteranc.es');
+    }
+  }
+
+  btf.addGlobalFn('themeChange', utterancesTheme, 'utterances')
+
+  if ('Waline' === 'Utterances' || !true) {
+    if (true) btf.loadComment(document.getElementById('utterances-wrap'), loadUtterances)
+    else loadUtterances()
+  } else {
+    window.loadOtherComment = loadUtterances
+  }
+})()</script></div><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/canvas-nest.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = true;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/click-show-text.min.js" data-mobile="true" data-text="自由,公平,正义" data-fontsize="15px" data-random="true" async="async"></script><script>(() => {
+  const isChatBtn = true
+  const isChatHideShow = false
+
+  if (isChatBtn) {
+    const close = () => {
+      Chatra('minimizeWidget')
+      Chatra('hide')
+    }
+
+    const open = () => {
+      Chatra('openChat', true)
+      Chatra('show')
+    }
+
+    window.ChatraSetup = {
+      startHidden: true
+    }
+  
+    window.chatBtnFn = () => {
+      const isShow = document.getElementById('chatra').classList.contains('chatra--expanded')
+      isShow ? close() : open()
+    }
+  } else if (isChatHideShow) {
+    window.chatBtn = {
+      hide: () => {
+        Chatra('hide')
+      },
+      show: () => {
+        Chatra('show')
+      }
+    }
+  }
+
+  (function(d, w, c) {
+    w.ChatraID = 'DqdzwBi5uYM8cBpEy'
+    var s = d.createElement('script')
+    w[c] = w[c] || function() {
+        (w[c].q = w[c].q || []).push(arguments)
+    }
+    s.async = true
+    s.src = 'https://call.chatra.io/chatra.js'
+    if (d.head) d.head.appendChild(s)
+  })(document, window, 'Chatra')
+
+})()</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/metingjs/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["link[rel=\"canonical\"]","meta[property=\"og:image\"]","meta[property=\"og:title\"]","meta[property=\"og:url\"]","head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener
+  btf.removeGlobalFnEvent('pjax')
+  btf.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/works/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/works/js/search/local-search.js?v=4.13.0"></script></div></div><!-- hexo injector body_end start -->
+<script src="/works/js/collapse.js"></script>
+<!-- hexo injector body_end end --><script src="/works/js/markmap.js"></script></body></html>
