@@ -43,8 +43,8 @@
 - 2024-04-29 [Linux相关站点](https://red-signals.github.io/Works/2024/04/29/Linux%E7%9B%B8%E5%85%B3%E7%AB%99%E7%82%B9/)  
 - 2024-04-29 [Host文件修改](https://red-signals.github.io/Works/2024/04/29/Host%E6%96%87%E4%BB%B6%E4%BF%AE%E6%94%B9/)  
 - 2024-04-29 [Auto.js](https://red-signals.github.io/Works/2024/04/29/Auto.js/)  
-- 2024-04-29 [GitKraken安装](https://red-signals.github.io/Works/2024/04/29/GitKraken%E5%AE%89%E8%A3%85/)  
 - 2024-04-29 [Butterfly安装与配置](https://red-signals.github.io/Works/2024/04/29/Butterfly%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/)  
+- 2024-04-29 [GitKraken安装](https://red-signals.github.io/Works/2024/04/29/GitKraken%E5%AE%89%E8%A3%85/)  
 - 2024-04-07 [Hexo安装与配置](https://red-signals.github.io/Works/2024/04/07/Hexo%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/)  
   
   
